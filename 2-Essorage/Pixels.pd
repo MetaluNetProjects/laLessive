@@ -1,0 +1,8 @@
+#N canvas 553 520 450 300 10;
+#X obj 57 177 pixel/pixel 6 25;
+#X obj 57 153 pixel/pixel 5 22;
+#X obj 57 130 pixel/pixel 4 19;
+#X obj 57 112 pixel/pixel 3 16;
+#X obj 58 89 pixel/pixel 2 13;
+#X obj 58 71 pixel/pixel 1 10;
+#X obj 28 26 motlum/motlum moteur_pixel pixels preset_pixels _none_, f 63;

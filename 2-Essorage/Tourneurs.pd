@@ -1,7 +1,5 @@
 #N canvas 1039 98 450 380 10;
-#X obj 18 294 r fromTeleco;
 #X obj 18 344 s tourneurs-speed;
-#X obj 18 319 route tourneurs_speed tourneurs_home;
 #X obj 127 344 s tourneurs_home;
 #X obj 29 73 tourneur 1 \$1;
 #X obj 20 32 preset/preset tourneurs_preset 16;
@@ -10,6 +8,12 @@
 #X obj 29 136 tourneur 4 \$4;
 #X obj 29 156 tourneur 5 \$5;
 #X obj 29 177 tourneur 6 \$6;
-#X connect 0 0 2 0;
-#X connect 2 0 1 0;
-#X connect 2 1 3 0;
+#X obj 18 292 route tourneurs_master;
+#X obj 18 319 route line home, f 37;
+#X obj 201 241 bng 18 250 50 0 empty empty empty 0 -9 0 10 #fcfcfc #000000 #000000;
+#X obj 18 265 r fromOSC;
+#X connect 9 0 10 0;
+#X connect 10 0 0 0;
+#X connect 10 1 1 0;
+#X connect 10 1 11 0;
+#X connect 12 0 9 0;

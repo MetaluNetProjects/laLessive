@@ -659,7 +659,7 @@
                 "height": "29.59%",
                 "width": "99%",
                 "lock": false,
-                "id": "@{parent.id}_@{this.comments}",
+                "id": "moteur_@{parent.id}",
                 "visible": true,
                 "interaction": true,
                 "comments": "Pixels",
