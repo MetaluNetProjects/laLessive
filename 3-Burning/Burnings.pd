@@ -66,7 +66,7 @@
 #X connect 16 0 19 0;
 #X connect 20 0 2 0;
 #X restore 678 36 pd sons_liste;
-#N canvas 0 0 735 300 audio_master 1;
+#N canvas 0 0 735 300 audio_master 0;
 #X obj 43 32 catch~ burningout1;
 #X obj 188 31 catch~ burningout2;
 #X obj 332 31 catch~ burningout3;
@@ -121,6 +121,7 @@
 #X obj 615 275 hsl 170 20 0 1.5 0 0 BURNING-MASTER BURNING-MASTER BURNING-MASTER -2 -10 0 12 #faff00 #000000 #000000 0 1;
 #X obj 613 298 nbx 5 18 -1e+37 1e+37 0 0 BURNING-MASTER BURNING-MASTER empty 0 -10 0 12 #faff00 #000000 #000000 0 256;
 #X obj 676 11 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 614 171 s NETWORK-client;
 #X connect 5 0 9 0;
 #X connect 6 0 7 0;
 #X connect 6 0 8 0;
@@ -129,6 +130,7 @@
 #X connect 10 0 11 0;
 #X connect 13 0 14 0;
 #X connect 14 0 15 0;
+#X connect 15 0 32 0;
 #X connect 16 0 17 0;
 #X connect 17 0 20 0;
 #X connect 18 0 19 0;

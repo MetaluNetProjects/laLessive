@@ -1,4 +1,8 @@
 #!/bin/sh
 cd `dirname $0`
-open-stage-control  -s localhost:18080 -l ./essorage.json
-# --read-only
+
+while true; do
+	open-stage-control  -s localhost:18080 -l ./essorage.json
+	sleep 5
+done
+

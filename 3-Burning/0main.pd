@@ -1,4 +1,4 @@
-#N canvas 1019 26 808 417 10;
+#N canvas 1019 26 808 382 10;
 #X declare -path Fraise;
 #X declare -path abs -path main -path ../tools/AutoPreset;
 #X declare -path Fraise -path Fraise/pic;
@@ -188,6 +188,7 @@
 #X obj 376 302 Burnings 60 61 62;
 #X obj 21 38 pied/pied 1;
 #X obj 374 211 rem Tourneurs 121 122 123 124 125 126;
+#X obj 373 115 network/manager;
 #X connect 2 0 3 0;
 #X connect 5 0 10 0;
 #X connect 6 0 0 1;
