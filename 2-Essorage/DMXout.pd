@@ -1,4 +1,4 @@
-#N canvas 1131 107 639 346 12;
+#N canvas 1166 3 639 346 12;
 #X msg 15 209 c 30 i \$1 c \$2;
 #X obj 15 102 r 2DMX;
 #X obj 15 237 fruit/send DMX1;
@@ -22,7 +22,14 @@
 #X msg 561 197 8 \$1;
 #X obj 13 36 fruit/fruit 1 DMX1 \$1 dmxFW 1;
 #X obj 75 154 settings/onoff DMX;
+#X obj 87 290 spigot;
+#X obj 87 315 print;
+#X obj 140 290 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 156 183 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 75 104 fruit/receive DMX1;
+#X obj 75 129 route present;
 #X connect 0 0 2 0;
+#X connect 0 0 23 0;
 #X connect 1 0 3 0;
 #X connect 3 0 0 0;
 #X connect 4 0 2 0;
@@ -43,3 +50,9 @@
 #X connect 19 0 4 0;
 #X connect 20 0 4 0;
 #X connect 22 0 3 1;
+#X connect 22 0 26 0;
+#X connect 22 0 21 0;
+#X connect 23 0 24 0;
+#X connect 25 0 23 1;
+#X connect 27 0 28 0;
+#X connect 28 0 22 0;

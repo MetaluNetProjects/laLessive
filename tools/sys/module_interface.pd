@@ -10,8 +10,7 @@
 #X obj 568 204 b;
 #X obj 707 177 loadbang;
 #X msg 568 255 _all_ _nbpattern_ \$1;
-#X obj 673 221 bng 18 250 50 0 empty empty empty 0 -9 0 10 -262144
--1 -1;
+#X obj 673 221 bng 18 250 50 0 empty empty empty 0 -9 0 10 #fcfcfc #000000 #000000;
 #X obj 568 229 f 32;
 #X obj 25 66 r fromOSC;
 #X obj 153 138 s toOSC;
@@ -35,6 +34,7 @@
 #X obj 31 248 route mute;
 #X obj 31 271 s \$1-mute;
 #X connect 0 0 16 0;
+#X connect 1 0 2 0;
 #X connect 3 0 19 0;
 #X connect 4 0 5 0;
 #X connect 6 0 7 0;

@@ -1,4 +1,4 @@
-#N canvas 231 72 808 333 10;
+#N canvas 568 48 808 334 10;
 #X declare -path Fraise;
 #X declare -lib iemlib;
 #X declare -path ../tools -path ../tools/sys -path .;
@@ -152,7 +152,7 @@
 #X obj 25 258 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 21 115 sel 1;
 #X obj 201 142 start;
-#X obj 23 223 1TELECO_OSC/TelecoMaster;
+#X obj 20 208 1TELECO_OSC/TelecoMaster;
 #X obj 226 118 loadbang;
 #X obj 21 16 declare -path Fraise;
 #X obj 542 15 declare -lib iemlib;
@@ -162,15 +162,18 @@
 #X obj 587 135 s sequence-deletemute;
 #X obj 587 112 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 209 16 declare -path abs -path main -path ../tools/AutoPreset;
-#X obj 121 287 s RELOAD_PRESETS;
-#X obj 121 260 bng 18 250 50 0 empty empty empty 0 -9 0 10 #fcfcfc #000000 #000000;
+#X obj 195 279 s RELOAD_PRESETS;
+#X obj 195 252 bng 18 250 50 0 empty empty empty 0 -9 0 10 #fcfcfc #000000 #000000;
 #X obj 374 145 DMXout 10;
 #X obj 374 168 Leds 100;
 #X obj 374 189 3motors/main 20 21;
-#X obj 374 211 Tourneurs 40 41 42 43 44 45;
 #X obj 483 92 settings/main;
-#X obj 375 234 automatic/automatic 1 1;
 #X obj 376 260 Pixels;
+#X obj 374 211 Tourneurs 121 122 123 124 125 126;
+#X obj 195 230 route RELOAD_PRESETS;
+#X obj 195 206 r fromOSC;
+#X obj 375 234 automatic/automatic_main;
+#X obj 376 283 projo_pantilt/projo_pantilts;
 #X connect 0 0 10 0;
 #X connect 3 0 4 0;
 #X connect 6 0 11 0;
@@ -181,3 +184,5 @@
 #X connect 13 0 6 0;
 #X connect 20 0 19 0;
 #X connect 23 0 22 0;
+#X connect 30 0 23 0;
+#X connect 31 0 30 0;

@@ -1,5 +1,5 @@
 {
-  "version": "1.25.6",
+  "version": "1.25.7",
   "createdWith": "Open Stage Control",
   "type": "fragment",
   "content": {
@@ -187,7 +187,7 @@
         "spring": false,
         "range": {
           "min": 0,
-          "max": 1
+          "max": 100
         },
         "logScale": false,
         "sensitivity": 1,
@@ -200,7 +200,7 @@
         "top": "78.65%",
         "left": "5.83%",
         "lock": false,
-        "id": "@{parent.id}_lum",
+        "id": "@{parent.id}_@{this.preArgs}",
         "visible": true,
         "comments": "",
         "width": "90%",
@@ -221,9 +221,9 @@
         "value": "",
         "default": "",
         "linkId": "",
-        "address": "auto",
-        "preArgs": "",
-        "decimals": 2,
+        "address": "@{parent.id}",
+        "preArgs": "lum",
+        "decimals": 0,
         "target": "",
         "onCreate": "",
         "onValue": "",

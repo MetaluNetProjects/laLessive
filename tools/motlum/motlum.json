@@ -1,5 +1,5 @@
 {
-  "version": "1.25.6",
+  "version": "1.25.7",
   "createdWith": "Open Stage Control",
   "type": "fragment",
   "content": {
@@ -131,14 +131,14 @@
         "bypass": false,
         "onCreate": "",
         "onValue": "",
-        "design": "round",
+        "design": "compact",
         "pips": false,
         "dashed": false,
         "spring": false,
         "doubleTap": false,
         "range": {
           "min": 0,
-          "max": 10
+          "max": 100
         },
         "logScale": false,
         "sensitivity": 1,
@@ -193,7 +193,7 @@
         "spring": false,
         "range": {
           "min": 0,
-          "max": 1
+          "max": 100
         },
         "logScale": false,
         "sensitivity": 1,
@@ -235,7 +235,7 @@
         "address": "auto",
         "preArgs": "",
         "typeTags": "",
-        "decimals": 2,
+        "decimals": 0,
         "target": "",
         "ignoreDefaults": false,
         "bypass": true,
@@ -324,7 +324,7 @@
         "address": "auto",
         "preArgs": "",
         "typeTags": "",
-        "decimals": 2,
+        "decimals": 0,
         "target": "",
         "ignoreDefaults": false,
         "bypass": true,
@@ -380,7 +380,7 @@
         "spring": false,
         "range": {
           "min": 0,
-          "max": 1
+          "max": 100
         },
         "logScale": false,
         "sensitivity": 1,
@@ -435,7 +435,7 @@
         "spring": false,
         "range": {
           "min": 0,
-          "max": 1
+          "max": 100
         },
         "logScale": false,
         "sensitivity": 1,
@@ -477,7 +477,7 @@
         "address": "auto",
         "preArgs": "",
         "typeTags": "",
-        "decimals": 2,
+        "decimals": 0,
         "target": "",
         "ignoreDefaults": false,
         "bypass": true,
@@ -533,7 +533,7 @@
         "spring": false,
         "range": {
           "min": 0,
-          "max": 1
+          "max": 100
         },
         "logScale": false,
         "sensitivity": 1,
@@ -575,7 +575,7 @@
         "address": "auto",
         "preArgs": "",
         "typeTags": "",
-        "decimals": 2,
+        "decimals": 0,
         "target": "",
         "ignoreDefaults": false,
         "bypass": true,
@@ -618,7 +618,7 @@
         "address": "auto",
         "preArgs": "",
         "typeTags": "",
-        "decimals": 1,
+        "decimals": 0,
         "target": "",
         "ignoreDefaults": false,
         "bypass": true,

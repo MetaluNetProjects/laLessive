@@ -1,5 +1,5 @@
 {
-  "version": "1.25.6",
+  "version": "1.25.7",
   "createdWith": "Open Stage Control",
   "type": "fragment",
   "content": {
@@ -147,7 +147,7 @@
         "wrap": false,
         "on": 1,
         "off": 0,
-        "mode": "toggle",
+        "mode": "tap",
         "decoupled": false
       },
       {

@@ -17,20 +17,8 @@ volatile int move;
 long int wanted_pos = 0;
 long int old_wanted_pos = 0;
 unsigned int period = PERIOD_MAX;
-byte logging;
 
 t_ramp ramp;
-
-/* zero: switch goes on ( = level 0) when moving backward */
-
-
-typedef enum {
-	STOP,
-	FORWARD,
-	BACKWARD,
-	RUN
-} tState;
-tState State = STOP;
 
 int Speed;
 
@@ -43,7 +31,6 @@ int Speed;
 #define INTPIN 2
 #include <intpin.h>
 
-#define SWITCH_IS_ON() (digitalRead(SW_ZERO) == 0)
 
 #define TIMER_INIT() do{\
 	TIMER_CON = 0; \
@@ -109,20 +96,6 @@ __critical{
 	return move;
 }
 
-void startHoming()
-{
-	if(SWITCH_IS_ON()) {
-		State = FORWARD;
-		Speed = 150;
-	} else {
-		State = BACKWARD;
-		INTPIN_IF = 0;
-		intpin_happened = 0;
-		INTPIN_IE = 1;
-		Speed = -70;
-	}
-}
-
 void loop() {
 // ---------- Main loop ------------
 	fraiseService();	// listen to Fraise events
@@ -132,25 +105,9 @@ void loop() {
 		delayStart(mainDelay, 10000); 	// re-init mainDelay
 		if(Speed) rampMove(&ramp, Speed);
 
-		if(State == FORWARD && !SWITCH_IS_ON()) {
-			State = BACKWARD;
-			Speed = -70;
-			INTPIN_IF = 0;
-			intpin_happened = 0;
-			INTPIN_IE = 1;
-		}
-
 		if(intpin_happened) {
 			intpin_happened = 0;
 			printf("Ci %ld %d\n", wanted_pos - move_on_intpin, move_on_intpin);
-			Speed = 0;
-			State = RUN;
-			//__critical{move = 0; old_wanted_pos = wanted_pos = l;}
-			move_add(-move_on_intpin);
-			SET_PERIOD(PERIOD_MAX)
-			//rampSetPos(&ramp, ramp.length - move_on_intpin);
-			rampSetPos(&ramp, 0);
-			//rampGoto(0);
 		}
 
 		rampCompute(&ramp);
@@ -163,7 +120,7 @@ void loop() {
 
 		now_move = move_add((int)distance);
 		//printf("Cp %ld %ld %ld %d %d\n", wanted_pos, old_wanted_pos, distance, now_move/*isrCost*/ /*rampGetPos(&ramp)*/, period);
-		if(logging) printf("Cp %ld %d\n", wanted_pos, SWITCH_IS_ON());
+		printf("Cp %ld %d\n", wanted_pos, digitalRead(SW_ZERO) == 0);
 
 		if(now_move != 0) {
 			now_move = abs(now_move);
@@ -261,8 +218,6 @@ void fraiseReceive() // receive raw bytes
 				intpin_happened = 0;
 			//}
 			break;
-		case 103: startHoming(); break; 
-		case 104: logging = fraiseGetChar(); break; 
 		case 255: if(fraiseGetChar() == 255) EEwriteMain(); break;
 	}
 }

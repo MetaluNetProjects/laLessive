@@ -1,0 +1,17 @@
+#N canvas 673 287 496 403 12;
+#X obj 25 59 proj 1 1 1;
+#X obj 26 17 preset/preset projo_pantilt_preset 16;
+#X obj 30 226 r fromOSC;
+#X obj 30 280 route line home ALL, f 55;
+#X obj 30 309 * 1000;
+#X obj 30 253 route projo_pantilt_master;
+#X obj 157 306 s projo_pantilt_home;
+#X obj 30 337 s projo_pantilt-line;
+#X obj 27 85 proj 2 2 2;
+#X obj 27 109 proj 3 3 3;
+#X obj 29 135 proj 4 4 4;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 3 1 6 0;
+#X connect 4 0 7 0;
+#X connect 5 0 3 0;

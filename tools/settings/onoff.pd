@@ -1,4 +1,4 @@
-#N canvas 760 45 524 326 12;
+#N canvas 409 377 660 326 12;
 #X obj 43 70 route \$1;
 #X obj 43 95 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 43 199 list prepend \$1;
@@ -18,6 +18,9 @@
 #X obj 43 20 r fromOSC-settings_onoff;
 #X obj 43 225 s toOSC-settings_onoff;
 #X obj 18 257 outlet;
+#X obj 464 68 inlet monitor;
+#X obj 464 120 s toOSC-settings_onoff;
+#X obj 464 94 list prepend \$1-mon;
 #X connect 0 0 1 0;
 #X connect 1 0 5 0;
 #X connect 1 0 7 0;
@@ -39,3 +42,5 @@
 #X connect 14 0 15 0;
 #X connect 15 0 8 0;
 #X connect 16 0 0 0;
+#X connect 19 0 21 0;
+#X connect 21 0 20 0;

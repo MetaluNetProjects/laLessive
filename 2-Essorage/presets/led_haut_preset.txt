@@ -1,0 +1,10 @@
+moteur_led_haut amplitude 0 16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+moteur_led_haut déphase 0 16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+moteur_led_haut dureté 0 16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+moteur_led_haut vitesse 0 16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+led_haut_6 lum 100 16 0 0 0 0 0 100 0 0 0 0 0 0 0 0 0 0;
+led_haut_5 lum 0 16 0 0 0 0 100 0 0 0 0 0 0 0 0 0 0 0;
+led_haut_4 lum 0 16 0 0 0 100 0 0 0 0 0 0 0 0 0 0 0 0;
+led_haut_3 lum 0 16 0 0 100 0 0 0 0 0 0 0 0 0 0 0 0 0;
+led_haut_2 lum 0 16 0 100 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+led_haut_1 lum 0 16 100 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;

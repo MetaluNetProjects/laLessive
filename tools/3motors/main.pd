@@ -1,2 +1,17 @@
-#N canvas 317 428 450 300 12;
+#N canvas 305 108 526 436 12;
 #X obj 19 13 fraise_interface \$1 \$2;
+#X obj 38 59 preset/preset 3moteurs_preset 16;
+#X obj 85 287 route tourneurs_master;
+#X obj 85 260 r fromOSC;
+#X obj 85 314 route line home ALL, f 55;
+#X obj 85 343 * 1000;
+#X obj 212 339 s 3moteurs_home;
+#X obj 85 371 s 3moteurs-speed;
+#X obj 50 108 moteur 1 X 170;
+#X obj 50 131 moteur 2 Y 170;
+#X obj 49 153 moteur 3 Z 170;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 4 1 6 0;
+#X connect 5 0 7 0;
