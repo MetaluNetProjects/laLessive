@@ -1,0 +1,11 @@
+#N canvas 151 363 893 306 10;
+#X obj 20 32 preset/preset preset_leds 16;
+#X obj 20 72 preset/preset led_haut_preset 16;
+#X obj 21 101 motlum/motlum moteur_led_haut ledsH preset_ledsHaut preset_leds, f 63;
+#X obj 22 125 led/led led_haut_1 1 ledsH led_haut_preset preset_leds;
+#X obj 21 146 led/led led_haut_2 2 ledsH led_haut_preset preset_leds;
+#X obj 22 171 led/led led_haut_3 3 ledsH led_haut_preset preset_leds;
+#X obj 21 192 led/led led_haut_4 4 ledsH led_haut_preset preset_leds;
+#X obj 21 215 led/led led_haut_5 5 ledsH led_haut_preset preset_leds;
+#X obj 21 238 led/led led_haut_6 6 ledsH led_haut_preset preset_leds;
+#X obj 20 6 led/ledfruit 1 \$1;
