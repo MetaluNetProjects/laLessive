@@ -167,14 +167,10 @@
 #X obj 376 260 Pixels;
 #X obj 195 230 route RELOAD_PRESETS;
 #X obj 195 206 r fromOSC;
-#X obj 376 283 projo_pantilt/projo_pantilts;
 #X obj 209 71 declare -path Fraise -path Fraise/pic;
 #X obj 542 15 declare -path iemlib -lib iemlib;
 #X obj 209 38 declare -path ../tools -path ../tools/sys -path . -path ggee -path zexy -lib zexy;
 #X obj 20 208 rem 1TELECO_OSC/TelecoMaster;
-#X obj 374 168 rem Leds 100;
-#X obj 374 189 rem 3motors/main 20 21;
-#X obj 374 211 rem Tourneurs 121 122 123 124 125 126;
 #X obj 375 234 rem automatic/automatic_main;
 #N canvas 743 487 450 300 shutdown 0;
 #X obj 116 54 r fromOSC;
@@ -187,6 +183,10 @@
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
 #X restore 663 189 pd shutdown;
+#X obj 374 168 Leds 100;
+#X obj 374 189 3motors/main 20 21;
+#X obj 374 211 Tourneurs 121 122 123 124 125 126;
+#X obj 376 283 rem projo_pantilt/projo_pantilts;
 #X connect 0 0 10 0;
 #X connect 3 0 4 0;
 #X connect 6 0 11 0;

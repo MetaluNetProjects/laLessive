@@ -51,12 +51,12 @@ void setup(void) {
 	dcmotorInit(D);
 
 	//DCMOTOR(C).Setting.onlyPositive = 1;
-	DCMOTOR(C).Setting.PosWindow = 15;
-	DCMOTOR(C).Setting.PwmMin = 150;
+	DCMOTOR(C).Setting.PosWindow = 3;
+	DCMOTOR(C).Setting.PwmMin = 50;
 	DCMOTOR(C).Setting.PosErrorGain = 5;
 
-	DCMOTOR(D).Setting.PosWindow = 15;
-	DCMOTOR(D).Setting.PwmMin = 150;
+	DCMOTOR(D).Setting.PosWindow = 3;
+	DCMOTOR(D).Setting.PwmMin = 50;
 	DCMOTOR(D).Setting.PosErrorGain = 5;
 
 //#define HW_PARAMS

@@ -1,14 +1,10 @@
-onoff_proj4 0 0;
-onoff_proj3 1 0;
-onoff_proj2 0 0;
-onoff_proj1 1 0;
 onoff_tourneur6 1 0;
-onoff_tourneur5 1 0;
+onoff_tourneur5 0 0;
 onoff_tourneur4 1 0;
 onoff_tourneur3 1 0;
-onoff_tourneur2 0 0;
+onoff_tourneur2 1 0;
 onoff_tourneur1 1 0;
 onoff_3motorsZ 0 0;
-onoff_3motorsXY 1 0;
+onoff_3motorsXY 0 0;
 onoff_led1 1 0;
 onoff_DMX 1 0;
