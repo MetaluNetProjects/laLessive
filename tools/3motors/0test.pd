@@ -1,0 +1,5 @@
+#N canvas 332 565 450 300 12;
+#X declare -path Fraise -path Fraise/pic;
+#X obj 11 15 declare -path Fraise -path Fraise/pic;
+#X obj 11 40 pied/pied 1;
+#X obj 28 147 fraise_interface;

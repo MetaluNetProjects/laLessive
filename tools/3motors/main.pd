@@ -1,0 +1,2 @@
+#N canvas 317 428 450 300 12;
+#X obj 19 13 fraise_interface \$1 \$2;

@@ -1,4 +1,4 @@
-#N canvas 572 129 1088 693 10;
+#N canvas 760 182 1088 693 10;
 #X obj 532 335 tgl 15 0 empty empty set_LED 18 7 0 10 #00fc04 #000000 #000000 0 1;
 #X obj 532 285 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X msg 583 260 20;
@@ -123,7 +123,7 @@
 #X obj 689 166 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000;
 #X msg 717 182 -1500;
 #X msg 643 215 0.7;
-#N canvas 346 240 513 639 homing 1;
+#N canvas 346 240 513 639 homing 0;
 #X obj 49 16 inlet;
 #X obj 22 544 outlet;
 #X obj 274 23 inlet;
@@ -240,6 +240,7 @@
 #X obj 293 96 * 75000;
 #X obj 254 406 fruit/send2 tourneur\$1;
 #X obj 263 312 spigot;
+#X obj 20 109 settings/onoff tourneur\$1;
 #X connect 0 0 11 0;
 #X connect 1 0 5 0;
 #X connect 2 0 3 0;
@@ -383,3 +384,4 @@
 #X connect 135 0 136 0;
 #X connect 136 0 138 0;
 #X connect 138 0 23 0;
+#X connect 139 0 127 0;
