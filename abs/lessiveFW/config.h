@@ -11,7 +11,7 @@
 #define MOTD_END KZ1
 #define MOTD_A KZ1
 #define MOTD_B KZ1
-#define MOTD_ZERO K8
+#define MOTD_ZERO K6
 
 #define START_SWITCH K9
 

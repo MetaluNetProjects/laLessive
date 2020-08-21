@@ -1,7 +1,7 @@
-#N canvas 448 135 747 639 10;
+#N canvas 81 353 786 639 10;
 #X declare -path abs;
 #X declare -path maxlib -path moonlib -path ggee -path iemlib -lib
-zexy -path motex;
+iemlib -lib zexy -path motex;
 #X obj 93 239 * 1.8;
 #X floatatom 93 261 5 0 0 0 - - -;
 #X text 128 263 tr/mn;
@@ -12,7 +12,7 @@ zexy -path motex;
 #X obj 126 136 nbx 5 14 -1e+37 1e+37 0 0 \$0-Frame-snd \$0-Frame-rcv
 Frame 0 -8 0 10 -260097 -1 -1 0 256;
 #X obj 124 171 nbx 5 14 0 255 0 0 \$0-Speed-snd \$0-Speed-rcv Speed
-0 -8 0 10 -204786 -1 -1 0 256;
+0 -8 0 10 -204786 -1 -1 60 256;
 #X obj 125 209 nbx 5 14 1 255 0 0 \$0-Light-snd \$0-Light-rcv Light
 0 -8 0 10 -257985 -1 -1 1 256;
 #N canvas 709 81 731 514 tests 0;
@@ -153,21 +153,20 @@ Frame 0 -8 0 10 -260097 -1 -1 0 256;
 #X connect 65 0 30 0;
 #X connect 66 0 30 0;
 #X connect 67 0 32 0;
-#X restore 641 42 pd tests;
+#X restore 805 55 pd tests;
 #X obj 188 70 hradio 15 1 0 11 empty empty empty 0 -8 0 10 -262144
 -1 -1 0;
-#X obj 575 441 tgl 30 0 \$0-Calage empty Calage -10 -12 0 12 -262144
+#X obj 812 318 tgl 30 0 \$0-Calage empty Calage -10 -12 0 12 -262144
 -1 -1 0 1;
 #X obj 192 232 hradio 15 1 0 8 \$0-Mode-snd \$0-Mode-rcv Mode 0 -8
 0 12 -262144 -1 -1 0;
 #X obj 107 83 del 1000;
-#X obj 107 61 sel 1;
 #X msg 111 104 60;
 #X obj 55 15 loadbang;
 #X obj 56 37 del 5000;
 #X obj 335 148 vsl 15 128 0 1 0 1 \$0-LumMaster-snd \$0-LumMaster-rcv
 LumMaster 0 -9 1 10 -257985 -1 -1 12700 1;
-#X msg 134 32 \; pd dsp 1;
+#X msg -1 22 \; pd dsp 1;
 #N canvas 1 81 508 451 Lampes 0;
 #X obj 74 49 dispatch \$0-lampe 1 6;
 #X obj 123 109 r \$0-lampesoff-snd;
@@ -235,7 +234,7 @@ LumMaster 0 -9 1 10 -257985 -1 -1 12700 1;
 132 6 1 10 -262144 -1 -1 0 1;
 #X obj 342 515 bng 15 250 50 0 \$0-lampesoff-snd \$0-lampesoff-rcv
 lampes-off 17 7 1 10 -262144 -1 -1;
-#N canvas 18 81 913 610 Calages 0;
+#N canvas 18 81 913 610 Calages 1;
 #X obj 26 21 dispatch \$0-calage 1 6;
 #X obj 22 63 r \$0-calage-snd;
 #X msg 22 87 \$1 calage \$2;
@@ -490,12 +489,12 @@ V t T g G b B h H;
 #X msg 200 173 -1 speed \$1;
 #X obj 200 195 s \$0-2StepMotor;
 #X obj 197 148 s \$0-2StepMotor;
-#X obj 590 187 l StepMotor \$0 1 1;
-#X obj 590 209 l StepMotor \$0 2 9;
-#X obj 591 231 l StepMotor \$0 3 17;
-#X obj 590 251 l StepMotor \$0 4 25;
-#X obj 590 271 l StepMotor \$0 5 33;
-#X obj 590 291 l StepMotor \$0 6 41;
+#X obj 811 128 l StepMotor \$0 1 1;
+#X obj 811 150 l StepMotor \$0 2 9;
+#X obj 812 172 l StepMotor \$0 3 17;
+#X obj 811 192 l StepMotor \$0 4 25;
+#X obj 811 212 l StepMotor \$0 5 33;
+#X obj 811 232 l StepMotor \$0 6 41;
 #N canvas 1002 184 719 305 Move 0;
 #X floatatom 29 32 5 0 0 0 - - -;
 #X obj 27 99 s \$0-2StepMotor;
@@ -696,7 +695,7 @@ V t T g G b B h H;
 #X connect 27 0 25 1;
 #X connect 28 0 19 0;
 #X restore 15 351 pd Move;
-#X obj 590 311 l StepMotor \$0 7 49;
+#X obj 811 252 l StepMotor \$0 7 49;
 #X obj 361 225 * 100;
 #X floatatom 361 247 5 0 0 0 - - -;
 #X obj 320 403 vsl 15 128 0 1 0 0 \$0-lampeall-snd \$0-lampeall-rcv
@@ -713,7 +712,7 @@ empty 0 -9 0 10 -262144 -1 -1 0 1;
 4 7 0 10 -262144 -1 -1;
 #X obj 492 340 bng 15 250 50 0 \$0-calagef6-snd \$0-calagef6-rcv 6
 4 7 0 10 -262144 -1 -1;
-#N canvas 341 81 977 719 Scenario 1;
+#N canvas 873 137 977 719 Scenario 0;
 #X obj 368 336 shuffle 0 43 0.5;
 #X obj 351 334 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -2943,43 +2942,56 @@ all 1 7 0 10 -262144 -1 -1;
 #X text 179 286 im/sec;
 #X msg 632 515 44;
 #X obj 20 558 declare -path abs;
-#N canvas 132 304 594 485 DMX 0;
+#N canvas 66 473 594 485 DMX 0;
 #X obj 156 63 r \$0-toDMX2;
 #X obj 156 119 s toDMXfraise;
 #X obj 156 91 route D;
+#X obj 340 166 print;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
 #X restore 8 72 pd DMX;
 #X obj 9 100 fraise;
 #X obj 20 579 declare -path maxlib -path moonlib -path ggee -path iemlib
--lib zexy -path motex, f 81;
+-lib iemlib -lib zexy -path motex, f 81;
+#X obj 440 91 fruit/receive fruit1;
+#X obj 120 22 r DMXdriverOK;
+#X obj 120 45 sel 1;
+#X obj 542 313 hsl 128 15 0 1 0 0 Treuil1 Treuil1 Treuil1 -2 -8 0 10
+-262130 -1 -1 0 1;
+#X obj 543 346 hsl 128 15 0 1 0 0 Treuil2 Treuil2 Treuil2 -2 -8 0 10
+-262130 -1 -1 0 1;
+#X obj 683 313 tgl 15 0 treuilzero1 treuilzero1 treuilzero1 0 -7 0
+10 -262130 -1 -1 0 1;
+#X obj 683 347 tgl 15 0 treuilzero2 treuilzero2 treuilzero2 0 -7 0
+10 -262130 -1 -1 1 1;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 3 0 4 0;
-#X connect 3 0 87 0;
+#X connect 3 0 86 0;
 #X connect 4 0 5 0;
 #X connect 8 0 0 0;
-#X connect 8 0 37 0;
+#X connect 8 0 36 0;
 #X connect 11 0 7 0;
-#X connect 14 0 16 0;
-#X connect 14 0 62 0;
-#X connect 15 0 14 0;
-#X connect 16 0 8 0;
-#X connect 17 0 18 0;
-#X connect 18 0 20 0;
-#X connect 19 0 48 0;
-#X connect 37 0 38 0;
-#X connect 48 0 49 0;
-#X connect 62 0 65 0;
-#X connect 63 0 65 0;
-#X connect 64 0 37 0;
-#X connect 65 0 39 0;
+#X connect 14 0 15 0;
+#X connect 14 0 61 0;
+#X connect 15 0 8 0;
+#X connect 16 0 17 0;
+#X connect 17 0 19 0;
+#X connect 18 0 47 0;
+#X connect 36 0 37 0;
+#X connect 47 0 48 0;
+#X connect 61 0 64 0;
+#X connect 62 0 64 0;
+#X connect 63 0 36 0;
+#X connect 64 0 38 0;
+#X connect 65 0 66 0;
 #X connect 66 0 67 0;
-#X connect 67 0 68 0;
-#X connect 72 0 57 0;
-#X connect 73 0 65 0;
-#X connect 74 0 8 0;
-#X connect 82 0 83 0;
-#X connect 83 0 81 0;
-#X connect 85 0 81 0;
-#X connect 89 0 81 0;
+#X connect 71 0 56 0;
+#X connect 72 0 64 0;
+#X connect 73 0 8 0;
+#X connect 81 0 82 0;
+#X connect 82 0 80 0;
+#X connect 84 0 80 0;
+#X connect 88 0 80 0;
+#X connect 94 0 95 0;
+#X connect 95 0 14 0;
