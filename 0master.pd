@@ -1,4 +1,4 @@
-#N canvas 81 353 786 639 10;
+#N canvas 582 183 786 639 10;
 #X declare -path abs;
 #X declare -path maxlib -path moonlib -path ggee -path iemlib -lib
 iemlib -lib zexy -path motex;
@@ -234,7 +234,7 @@ LumMaster 0 -9 1 10 -257985 -1 -1 12700 1;
 132 6 1 10 -262144 -1 -1 0 1;
 #X obj 342 515 bng 15 250 50 0 \$0-lampesoff-snd \$0-lampesoff-rcv
 lampes-off 17 7 1 10 -262144 -1 -1;
-#N canvas 18 81 913 610 Calages 1;
+#N canvas 26 308 913 610 Calages 0;
 #X obj 26 21 dispatch \$0-calage 1 6;
 #X obj 22 63 r \$0-calage-snd;
 #X msg 22 87 \$1 calage \$2;
@@ -2953,7 +2953,6 @@ all 1 7 0 10 -262144 -1 -1;
 #X obj 9 100 fraise;
 #X obj 20 579 declare -path maxlib -path moonlib -path ggee -path iemlib
 -lib iemlib -lib zexy -path motex, f 81;
-#X obj 440 91 fruit/receive fruit1;
 #X obj 120 22 r DMXdriverOK;
 #X obj 120 45 sel 1;
 #X obj 542 313 hsl 128 15 0 1 0 0 Treuil1 Treuil1 Treuil1 -2 -8 0 10
@@ -2963,7 +2962,21 @@ all 1 7 0 10 -262144 -1 -1;
 #X obj 683 313 tgl 15 0 treuilzero1 treuilzero1 treuilzero1 0 -7 0
 10 -262130 -1 -1 0 1;
 #X obj 683 347 tgl 15 0 treuilzero2 treuilzero2 treuilzero2 0 -7 0
-10 -262130 -1 -1 1 1;
+10 -262130 -1 -1 0 1;
+#X obj 596 153 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 612 188 metro 1500;
+#N canvas 112 433 518 413 \$0-conduite 1;
+#X obj 125 98 seq/main conduite;
+#X obj 54 314 chenille Haut 1 2 3 4;
+#X obj 62 119 bng 15 250 50 0 conduite-RESET empty RESET 17 7 0 10
+-262144 -1 -1;
+#X obj 79 210 seq/ramp conduite motor1;
+#X obj 125 37 loadbang;
+#X obj 125 58 del 2000;
+#X connect 4 0 5 0;
+#X connect 5 0 0 0;
+#X restore 634 94 pd \$0-conduite;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 3 0 4 0;
@@ -2993,5 +3006,8 @@ all 1 7 0 10 -262144 -1 -1;
 #X connect 82 0 80 0;
 #X connect 84 0 80 0;
 #X connect 88 0 80 0;
-#X connect 94 0 95 0;
-#X connect 95 0 14 0;
+#X connect 93 0 94 0;
+#X connect 94 0 14 0;
+#X connect 99 0 100 0;
+#X connect 100 0 50 0;
+#X connect 100 0 60 0;
