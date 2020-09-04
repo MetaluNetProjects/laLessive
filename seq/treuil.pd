@@ -1,0 +1,33 @@
+#N canvas 569 545 374 341 10;
+#X obj 52 45 r seq-\$1-line;
+#X obj 55 267 hsl 120 10 0 1 0 0 Treuil\$2 Treuil\$2 empty -2 -8 0
+10 -261682 -1 -1 0 1;
+#X obj 52 122 rampe \$1;
+#X obj 191 262 tgl 15 0 treuilzero\$2 treuilzero\$2 zero -5 -7 0 10
+-260097 -4034 -1 0 1;
+#X obj 52 168 s Treuil\$2;
+#X obj 52 65 route treuil\$2;
+#X obj 52 143 / 100;
+#X obj 52 93 route speed autostop, f 30;
+#X obj 175 139 r treuilzero\$2;
+#X obj 175 160 spigot;
+#X obj 175 181 sel 1;
+#X msg 175 202 0;
+#X msg 140 113 1;
+#X msg 214 180 0;
+#X obj 270 139 r \$1-RESET;
+#X connect 0 0 5 0;
+#X connect 2 0 6 0;
+#X connect 5 0 7 0;
+#X connect 6 0 4 0;
+#X connect 7 0 2 0;
+#X connect 7 1 12 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 9 0 13 0;
+#X connect 10 0 11 0;
+#X connect 11 0 2 0;
+#X connect 12 0 9 1;
+#X connect 13 0 9 1;
+#X connect 14 0 13 0;
+#X coords 0 -1 1 1 160 30 1 50 250;

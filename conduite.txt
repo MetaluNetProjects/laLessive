@@ -135,10 +135,10 @@ proj3 lampe 100 1
 proj2 lampe 100 3
 proj5 lampe 100 5
 proj6 lampe 100 7
-proj3 lampe random 0.5 30 # lampe random: speed(Hz) val_min(% du max)
-proj2 lampe random 0.5 30 # lampe random: speed(Hz) val_min(% du max)
-proj5 lampe random 0.5 30 # lampe random: speed(Hz) val_min(% du max)
-proj6 lampe random 0.5 30 # lampe random: speed(Hz) val_min(% du max)
+proj3 lampe random 0.5 30 100 # lampe random: speed(Hz) val_min val_max
+proj2 lampe random 0.5 30 100 # lampe random: speed(Hz) val_min val_max
+proj5 lampe random 0.5 30 100 # lampe random: speed(Hz) val_min val_max
+proj6 lampe random 0.5 30 100 # lampe random: speed(Hz) val_min val_max
 
 wait proj1 74
 wait proj2 74
