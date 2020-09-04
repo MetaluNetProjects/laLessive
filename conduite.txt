@@ -47,6 +47,7 @@ proj1 stop
 proj4 stop
 proj1 lampe 0
 proj4 lampe 0
+sleep 1
 
 proj1 nextframe 120
 proj2 nextframe 120
@@ -92,8 +93,13 @@ wait proj6 41
 
 proj1 stop
 proj4 stop
-proj1 lampe 0
-proj4 lampe 0
+proj1 lampe 0 1
+proj2 lampe 0 1
+proj3 lampe 0 1
+proj4 lampe 0 1
+proj5 lampe 0 1
+proj6 lampe 0 1
+sleep 1.5
 
 proj1 nextframe 120
 proj2 nextframe 120
@@ -105,32 +111,25 @@ sleep 1
 proj1 lampe 100 2
 proj4 lampe 100 2
 
-proj1 lampe 0 1
-proj2 lampe 0 1
-proj3 lampe 0 1
-proj4 lampe 0 1
-proj5 lampe 0 1
-proj6 lampe 0 1
-
 sleep 1.5
 
 metro1 1.5 # 0->99 en 5s
-proj1 diapo 100 10 0 80 0
+proj1 diapo 100 20 0 80 0
 proj1 mode 74 diapo 1 0
-proj4 diapo 100 10 0 80 0
+proj4 diapo 100 20 0 80 0
 proj4 mode 74 diapo 1 50
 
 proj3 continu speed 3 0 # mode "continu" du proj3 à vitesse 3 tout de suite
-proj3 continu speed 30 48 # mode "continu" du proj3 à vitesse 3
+proj3 continu speed 50 48 # mode "continu" du proj3 à vitesse 3
 proj3 mode 74 continu
 proj2 continu speed 3 0 # mode "continu" du proj3 à vitesse 3 tout de suite
-proj2 continu speed 40 48 # mode "continu" du proj3 à vitesse 3
+proj2 continu speed 55 48 # mode "continu" du proj3 à vitesse 3
 proj2 mode 74 continu
 proj5 continu speed 3 0 # mode "continu" du proj3 à vitesse 3 tout de suite
-proj5 continu speed 50 48 # mode "continu" du proj3 à vitesse 3
+proj5 continu speed 60 48 # mode "continu" du proj3 à vitesse 3
 proj5 mode 74 continu
 proj6 continu speed 3 0 # mode "continu" du proj3 à vitesse 3 tout de suite
-proj6 continu speed 60 48 # mode "continu" du proj3 à vitesse 3
+proj6 continu speed 65 48 # mode "continu" du proj3 à vitesse 3
 proj6 mode 74 continu
 proj3 lampe 100 1
 proj2 lampe 100 3
@@ -155,7 +154,7 @@ proj4 lampe 0 1
 proj5 lampe 0 1
 proj6 lampe 0 1
 
-sleep 1
+sleep 1.5
 proj1 nextframe 120
 proj2 nextframe 120
 proj3 nextframe 120
