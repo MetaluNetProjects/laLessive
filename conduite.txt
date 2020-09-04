@@ -1,85 +1,143 @@
-# MIN SEC FR param value fadetime
+# projs : 4 2 5
+#         3 1 6
 
-# chenilleHaut(1,2,3,4) chenilleBas(5,6) chenilleHautBas(15,26,35,46) : _Vitesse (tour/s) _Min (0-1) _Max(0-1) _Distance(0-1 ; 1=equidistant(120deg))
-# randomHaut, randomBas, randomHautBas : _Vitesse (0-100) _Min (0-1) _Max(0-1) _Power
+reset # tout à zero
+lampe1 100
+lampe2 100
+lampe3 100
+lampe4 100
+lampe1 0 30
+lampe2 0 30
+lampe3 0 30
+lampe4 0 30
 
-# début
-PART A
-0 0 0 reset
+sleep 25
 
-0 1 0 motor1 0.5 10
-0 1 0 motor3 0.7 15
-0 1 0 motor2 0.8 2
+metro1 5 # 0->99 en 5s
+proj1 diapo 80 20 0 50 0 # diapo: vitesse défilement film / temps avant allumage / temps d'allumage / temps avant extinction / temps d'extinction (les temps sont en % du temps du métro) 
+proj1 mode 25 diapo 1 0 # mode diapo metro1 phase 0 (->frame change au top du métro)
+proj2 diapo 80 20 0 50 0
+proj2 mode 25 diapo 1 50
+proj1 lampe 100 0
+proj2 lampe 100 0
 
-0 2 0 chenilleHaut_Distance 1
-0 2 0 chenilleHaut_Min 0 2
-0 2 0 chenilleHaut_Max 1 2
-0 2 0 chenilleHaut_Vitesse 0.5 15
-0 2 0 randomBas_Min 0.1 2
-0 2 0 randomBas_Max 0.5 2
-0 2 0 randomBas_Vitesse 3 2
+sleep 32
 
-0 17 0 chenilleHaut_Vitesse -1 20
+proj3 continu speed 3 0 # mode "continu" du proj3 à vitesse 3 tout de suite
+proj3 continu speed 20 125 # mode "continu" du proj3 à vitesse 3
+proj3 mode 25 continu
+proj4 continu speed 3 0 # mode "continu" du proj3 à vitesse 3 tout de suite
+proj4 continu speed 20 125 # mode "continu" du proj3 à vitesse 3
+proj4 mode 25 continu
+proj5 continu speed 3 0 # mode "continu" du proj3 à vitesse 3 tout de suite
+proj5 continu speed 20 125 # mode "continu" du proj3 à vitesse 3
+proj5 mode 25 continu
+proj6 continu speed 3 0 # mode "continu" du proj3 à vitesse 3 tout de suite
+proj6 continu speed 20 125 # mode "continu" du proj3 à vitesse 3
+proj6 mode 25 continu
 
-0 30 0 motor1 -0.5 15
+wait proj1 25
+wait proj2 25
+wait proj3 25
+wait proj4 25
+wait proj5 25
+wait proj6 25
 
-0 37 0 chenilleHaut_Vitesse 0 5
-0 37 0 chenilleHaut_Max 0 5
+proj1 stop
+proj2 stop
+proj1 lampe 0
+proj2 lampe 0
 
-0 40 0 randomBas_Max 0 2
-0 40 0 randomBas_Vitesse 0 2
-0 40 0 motor3 -1 20
+proj1 nextframe 120
+proj2 nextframe 120
+proj3 nextframe 120
+proj4 nextframe 120
+proj5 nextframe 120
+proj6 nextframe 120
+proj1 lampe 100 2
+proj2 lampe 100 2
 
-0 42 0 chenilleBas_Distance 2
-0 42 0 chenilleBas_Min 0 2
-0 42 0 chenilleBas_Max 1 2
-0 42 0 chenilleBas_Vitesse 0.8 15
-0 42 0 randomHaut_Min 0.1 2
-0 42 0 randomHaut_Max 0.5 2
-0 42 0 randomHaut_Vitesse 3 2
+sleep 4
 
-0 50 0 motor1 0 10
+metro1 3 # 0->99 en 5s
+proj1 diapo 100 10 0 90 0
+proj1 mode 41 diapo 1 0
+proj2 diapo 100 10 0 90 0
+proj2 mode 41 diapo 1 50
 
-0 57 0 chenilleBas_Vitesse -0.3 20
+proj3 continu speed 3 0 # mode "continu" du proj3 à vitesse 3 tout de suite
+proj3 continu speed 50 48 # mode "continu" du proj3 à vitesse 3
+proj3 mode 41 continu
+proj4 continu speed 3 0 # mode "continu" du proj3 à vitesse 3 tout de suite
+proj4 continu speed 50 48 # mode "continu" du proj3 à vitesse 3
+proj4 mode 41 continu
+proj5 continu speed 3 0 # mode "continu" du proj3 à vitesse 3 tout de suite
+proj5 continu speed 50 48 # mode "continu" du proj3 à vitesse 3
+proj5 mode 41 continu
+proj6 continu speed 3 0 # mode "continu" du proj3 à vitesse 3 tout de suite
+proj6 continu speed 50 48 # mode "continu" du proj3 à vitesse 3
+proj6 mode 41 continu
+proj3 lampe 100 2
+proj4 lampe 100 6
+proj5 lampe 100 10
+proj6 lampe 100 14
 
-1 10 0 motor1 1 20
-1 10 0 motor3 -1 20
+wait proj1 41
+wait proj2 41
+wait proj3 41
+wait proj4 41
+wait proj5 41
+wait proj6 41
 
-1 17 0 chenilleBas_Vitesse 0 5
-1 17 0 chenilleBas_Max 0 5
-1 20 0 randomHaut_Max 0 5
-1 20 0 randomHaut_Vitesse 0 5
+proj1 lampe 0 1
+proj2 lampe 0 1
+proj3 lampe 0 1
+proj4 lampe 0 1
+proj5 lampe 0 1
+proj6 lampe 0 1
 
-1 25 0 chenilleHautBas_Distance 1
-1 25 0 chenilleHautBas_Min 0 2
-1 25 0 chenilleHautBas_Max 1 10
-1 30 0 chenilleHautBas_Vitesse 0.3 15
-1 30 0 motor1 -1 20
-1 30 0 motor2 1 5
+sleep 1.5
 
-1 45 0 chenilleHautBas_Vitesse -0.8 25
+metro1 1.5 # 0->99 en 5s
+proj1 diapo 100 10 0 90 0
+proj1 mode 74 diapo 1 0
+proj2 diapo 100 10 0 90 0
+proj2 mode 74 diapo 1 50
 
-2 0  0 motor3 0.6 10
+proj3 continu speed 3 0 # mode "continu" du proj3 à vitesse 3 tout de suite
+proj3 continu speed 50 48 # mode "continu" du proj3 à vitesse 3
+proj3 mode 74 continu
+proj4 continu speed 3 0 # mode "continu" du proj3 à vitesse 3 tout de suite
+proj4 continu speed 50 48 # mode "continu" du proj3 à vitesse 3
+proj4 mode 74 continu
+proj5 continu speed 3 0 # mode "continu" du proj3 à vitesse 3 tout de suite
+proj5 continu speed 50 48 # mode "continu" du proj3 à vitesse 3
+proj5 mode 74 continu
+proj6 continu speed 3 0 # mode "continu" du proj3 à vitesse 3 tout de suite
+proj6 continu speed 50 48 # mode "continu" du proj3 à vitesse 3
+proj6 mode 74 continu
+proj3 lampe 100 1
+proj4 lampe 100 3
+proj5 lampe 100 5
+proj6 lampe 100 7
+proj3 lampe random 0.5 30 # lampe random: speed(Hz) val_min(% du max)
+proj4 lampe random 0.5 30 # lampe random: speed(Hz) val_min(% du max)
+proj5 lampe random 0.5 30 # lampe random: speed(Hz) val_min(% du max)
+proj6 lampe random 0.5 30 # lampe random: speed(Hz) val_min(% du max)
 
-2 10 0 chenilleHautBas_Vitesse 0
-2 11 0 randomBas_Min -10
-2 11 0 randomBas_Max 10
-2 11 0 randomBas_Vitesse 50
-2 11 0 randomBas_Power 3
-2 11 0 randomHaut_Min -10
-2 11 0 randomHaut_Max 10
-2 11 0 randomHaut_Vitesse 50
-2 11 0 randomHaut_Power 3
+wait proj1 74
+wait proj2 74
+wait proj3 74
+wait proj4 74
+wait proj5 74
+wait proj6 74
 
-2 20 0 motor1 0 15
-2 20 0 motor3 0 15
-2 20 0 motor2 0.8 15
+proj1 lampe 0 1
+proj2 lampe 0 1
+proj3 lampe 0 1
+proj4 lampe 0 1
+proj5 lampe 0 1
+proj6 lampe 0 1
 
-2 30 0 randomBas_Max 0 4
-2 30 0 randomHaut_Max 0 4
-2 30 0 motor1 0 5
-2 30 0 motor3 0 5
-2 36 0 randomHaut_Vitesse 0
-2 36 0 randomHaut_Bas 0
+sleep 1.5
 
-loop
