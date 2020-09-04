@@ -35,9 +35,9 @@
 #X obj 683 539 t f f;
 #X obj 683 567 div 60;
 #X obj 737 565 mod 60;
-#X floatatom 348 54 5 0 0 1 mn - -;
-#X floatatom 404 54 5 0 0 1 sec - -;
-#X floatatom 461 54 5 0 0 1 frame - -;
+#X floatatom 348 52 5 0 0 1 mn - -;
+#X floatatom 404 52 5 0 0 1 sec - -;
+#X floatatom 461 52 5 0 0 1 frame - -;
 #X msg 738 380 1000 24;
 #X msg 351 291 stop;
 #X obj 305 97 inlet go;
@@ -87,7 +87,7 @@
 #X obj 103 219 t f f f;
 #X obj 103 198 moses;
 #X obj 253 182 b;
-#X obj 253 204 del 100;
+#X obj 253 218 del 100;
 #X obj 103 286 t a a;
 #X obj 56 328 route pause loop sleep wait;
 #X msg 215 351 0;
@@ -160,7 +160,6 @@
 #X connect 79 1 11 0;
 #X connect 80 0 79 0;
 #X connect 80 1 81 0;
-#X connect 81 0 82 0;
 #X connect 82 0 74 0;
 #X connect 83 0 84 0;
 #X connect 83 1 17 0;
