@@ -2,6 +2,8 @@
 #         3 1 6
 
 reset # tout à zero
+reset_all_pos
+
 lampe1 100
 lampe2 100
 lampe3 100

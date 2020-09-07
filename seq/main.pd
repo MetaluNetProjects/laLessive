@@ -1,4 +1,4 @@
-#N canvas 671 233 911 684 10;
+#N canvas 694 330 911 684 10;
 #X obj 30 130 text define \$1;
 #X obj 30 72 symbol \$1;
 #X obj 30 44 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -57,15 +57,15 @@
 #X obj 454 332 r seq-\$1-lasttime;
 #X obj 436 355 f;
 #X obj 421 383 s \$1-playAt;
-#X obj 438 31 bng 15 250 50 0 \$1-RELOAD empty RELOAD 17 7 0 10 -260097
--1 -1;
-#X obj 306 31 bng 15 250 50 0 \$1-GO empty GO 17 7 0 10 -4034 -1 -1
+#X obj 438 31 bng 15 250 50 0 \$1-RELOAD \$1-RELOAD RELOAD 17 7 0 10
+-260097 -1 -1;
+#X obj 306 31 bng 15 250 50 0 \$1-GO \$1-GO GO 17 7 0 10 -4034 -1 -1
 ;
 #X obj 310 139 r \$1-GO;
 #X obj 306 116 s \$1-GO;
-#X obj 345 31 bng 15 250 50 0 \$1-STOP empty STOP 17 7 0 10 -258113
+#X obj 345 31 bng 15 250 50 0 \$1-STOP \$1-STOP STOP 17 7 0 10 -258113
 -1 -1;
-#X obj 392 31 bng 15 250 50 0 \$1-SKIP empty SKIP 17 7 0 10 -257985
+#X obj 392 31 bng 15 250 50 0 \$1-SKIP \$1-SKIP SKIP 17 7 0 10 -257985
 -1 -1;
 #X obj 563 129 r \$1-SKIP;
 #X obj 802 252 cnv 15 25 25 empty \$0-partcanvas A 10 15 0 14 -4032
@@ -91,6 +91,8 @@
 #X obj 103 286 t a a;
 #X obj 56 328 route pause loop sleep wait;
 #X msg 215 351 0;
+#X obj 683 588 pack f f f, f 19;
+#X obj 683 613 s seq-\$1-time;
 #X connect 1 0 4 0;
 #X connect 2 0 1 0;
 #X connect 3 0 2 0;
@@ -118,13 +120,16 @@
 #X connect 27 0 22 0;
 #X connect 28 0 27 0;
 #X connect 29 0 37 0;
+#X connect 29 0 86 2;
 #X connect 30 0 32 0;
 #X connect 31 0 30 0;
 #X connect 31 1 29 0;
 #X connect 32 0 33 0;
 #X connect 32 1 34 0;
 #X connect 33 0 35 0;
+#X connect 33 0 86 0;
 #X connect 34 0 36 0;
+#X connect 34 0 86 1;
 #X connect 38 0 23 0;
 #X connect 39 0 8 0;
 #X connect 39 0 22 0;
@@ -168,4 +173,5 @@
 #X connect 84 2 7 0;
 #X connect 84 4 85 0;
 #X connect 85 0 7 0;
+#X connect 86 0 87 0;
 #X coords 0 -1 1 1 230 60 1 300 10;
