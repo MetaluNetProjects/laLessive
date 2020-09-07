@@ -1,0 +1,172 @@
+############################## FRAME 135 
+
+treuil1 speed 40
+treuil2 speed 40
+
+metro1 3
+proj1 diapo 100 25 35 70 10 # diapo: vitesse défilement film / temps avant allumage / temps d'allumage / temps avant extinction / temps d'extinction (les temps sont en % du temps du métro) 
+proj1 diapo steps 2
+proj1 mode 189 diapo 1 0 # mode diapo metro1 phase 0 (->frame change au top du métro)
+proj1 lampe 100 0
+
+proj4 diapo 100 25 35 70 10
+proj4 diapo steps 2
+proj4 mode 189 diapo 1 50
+proj4 lampe 100 0
+
+proj3 nextframe 120
+proj2 nextframe 120
+proj5 nextframe 120
+proj6 nextframe 120
+
+sleep 1
+
+proj3 diapo 55 20 0 22 0 # diapo: vitesse défilement film / temps avant allumage / temps d'allumage / temps avant extinction / temps d'extinction (les temps sont en % du temps du métro) 
+proj3 diapo steps 2
+proj3 mode 190 diapo 1 35 # mode diapo metro1 phase 0 (->frame change au top du métro)
+proj3 lampe 75 0
+proj2 diapo 58 20 0 22 0 # diapo: vitesse défilement film / temps avant allumage / temps d'allumage / temps avant extinction / temps d'extinction (les temps sont en % du temps du métro) 
+proj2 diapo steps 2
+proj2 mode 190 diapo 1 10 # mode diapo metro1 phase 0 (->frame change au top du métro)
+proj2 lampe 75 0
+proj5 diapo 52 20 0 22 0 # diapo: vitesse défilement film / temps avant allumage / temps d'allumage / temps avant extinction / temps d'extinction (les temps sont en % du temps du métro) 
+proj5 diapo steps 2
+proj5 mode 190 diapo 1 70 # mode diapo metro1 phase 0 (->frame change au top du métro)
+proj5 lampe 75 0
+proj6 diapo 53 20 0 22 0 # diapo: vitesse défilement film / temps avant allumage / temps d'allumage / temps avant extinction / temps d'extinction (les temps sont en % du temps du métro) 
+proj6 diapo steps 2
+proj6 mode 190 diapo 1 85 # mode diapo metro1 phase 0 (->frame change au top du métro)
+proj6 lampe 75 0
+
+treuil1 autostop
+treuil2 autostop
+
+wait proj1 189
+wait proj4 189
+wait proj2 190
+wait proj3 190
+wait proj5 190
+wait proj6 190
+
+proj1 lampe 0
+proj2 lampe 0
+proj3 lampe 0
+proj4 lampe 0
+proj5 lampe 0
+proj6 lampe 0
+
+sleep 0.5
+
+lampe1 100
+lampe3 100
+sleep 0.2
+lampe1 0 
+lampe2 0 
+lampe3 0 
+lampe4 0
+
+sleep 0.1
+
+lampe2 100
+lampe4 100
+sleep 0.2
+lampe1 0 
+lampe2 0 
+lampe3 0 
+lampe4 0
+
+sleep 0.5
+
+
+############################## FRAME 189/190
+
+metro1 3.5
+proj1 diapo 100 25 35 70 10 # diapo: vitesse défilement film / temps avant allumage / temps d'allumage / temps avant extinction / temps d'extinction (les temps sont en % du temps du métro) 
+proj1 diapo steps 2
+proj1 mode 220 diapo 1 0 # mode diapo metro1 phase 0 (->frame change au top du métro)
+proj1 lampe 100 0
+
+proj4 diapo 98 25 35 70 10
+proj4 diapo steps 2
+proj4 mode 220 diapo 1 50
+proj4 lampe 100 0
+
+sleep 1
+
+proj3 diapo 55 20 0 22 0 # diapo: vitesse défilement film / temps avant allumage / temps d'allumage / temps avant extinction / temps d'extinction (les temps sont en % du temps du métro) 
+proj3 diapo steps 2
+proj3 mode 220 diapo 1 35 # mode diapo metro1 phase 0 (->frame change au top du métro)
+proj3 lampe 75 0
+proj2 diapo 48 20 0 22 0 # diapo: vitesse défilement film / temps avant allumage / temps d'allumage / temps avant extinction / temps d'extinction (les temps sont en % du temps du métro) 
+proj2 diapo steps 2
+proj2 mode 220 diapo 1 10 # mode diapo metro1 phase 0 (->frame change au top du métro)
+proj2 lampe 75 0
+proj5 diapo 52 20 0 22 0 # diapo: vitesse défilement film / temps avant allumage / temps d'allumage / temps avant extinction / temps d'extinction (les temps sont en % du temps du métro) 
+proj5 diapo steps 2
+proj5 mode 220 diapo 1 70 # mode diapo metro1 phase 0 (->frame change au top du métro)
+proj5 lampe 75 0
+proj6 diapo 50 20 0 22 0 # diapo: vitesse défilement film / temps avant allumage / temps d'allumage / temps avant extinction / temps d'extinction (les temps sont en % du temps du métro) 
+proj6 diapo steps 2
+proj6 mode 220 diapo 1 85 # mode diapo metro1 phase 0 (->frame change au top du métro)
+proj6 lampe 75 0
+
+wait proj1 221
+wait proj4 221
+wait proj2 220
+wait proj3 220
+wait proj5 220
+wait proj6 220
+
+proj1 lampe 0
+proj2 lampe 0
+proj3 lampe 0
+proj4 lampe 0
+proj5 lampe 0
+proj6 lampe 0
+
+sleep 0.5
+
+lampe1 100
+lampe3 100
+sleep 0.2
+lampe1 0 
+lampe2 0 
+lampe3 0 
+lampe4 0
+
+sleep 0.1
+
+lampe2 100
+lampe4 100
+sleep 0.2
+lampe1 0 
+lampe2 0 
+lampe3 0 
+lampe4 0
+
+sleep 0.17
+
+lampe1 100
+lampe3 100
+sleep 0.2
+lampe1 0 
+lampe2 0 
+lampe3 0 
+lampe4 0
+
+sleep 0.1
+
+lampe2 100
+lampe4 100
+sleep 0.2
+lampe1 0 
+lampe2 0 
+lampe3 0 
+lampe4 0
+
+sleep 0.5
+
+############################## FRAME 221 ~ 9mn
+
+
+

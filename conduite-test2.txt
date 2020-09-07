@@ -1,0 +1,24 @@
+sleep 0.5
+
+lampe1 100
+lampe3 100
+sleep 0.2
+lampe1 0 
+lampe2 0 
+lampe3 0 
+lampe4 0
+
+sleep 0.1
+
+lampe2 100
+lampe4 100
+sleep 0.2
+lampe1 0 
+lampe2 0 
+lampe3 0 
+lampe4 0
+
+############################## FRAME 189/190
+
+
+

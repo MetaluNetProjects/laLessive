@@ -1,8 +1,8 @@
-#N canvas 120 565 496 375 10;
+#N canvas 22 608 496 375 10;
 #X declare -path abs;
 #X declare -path maxlib -path moonlib -path ggee -path iemlib -lib
 iemlib -lib zexy -path motex;
-#N canvas 1042 448 946 634 guts 0;
+#N canvas 842 392 946 634 guts 0;
 #X obj 112 245 * 1.8;
 #X floatatom 112 267 5 0 0 0 - - -;
 #X text 147 269 tr/mn;
@@ -572,7 +572,7 @@ empty 0 -9 0 10 -262144 -1 -1 0 1;
 4 7 0 10 -262144 -1 -1;
 #X obj 511 346 bng 15 250 50 0 \$0-calagef6-snd \$0-calagef6-rcv 6
 4 7 0 10 -262144 -1 -1;
-#N canvas 873 137 977 719 Scenario 1;
+#N canvas 873 137 977 719 Scenario 0;
 #X obj 368 336 shuffle 0 43 0.5;
 #X obj 351 334 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -2820,9 +2820,9 @@ all 1 7 0 10 -262144 -1 -1;
 #X obj 562 352 hsl 128 15 0 1 0 0 Treuil2 Treuil2 Treuil2 -2 -8 0 10
 -262130 -1 -1 0 1;
 #X obj 702 319 tgl 15 0 treuilzero1 treuilzero1 treuilzero1 0 -7 0
-10 -262130 -1 -1 0 1;
+10 -262130 -1 -1 1 1;
 #X obj 702 353 tgl 15 0 treuilzero2 treuilzero2 treuilzero2 0 -7 0
-10 -262130 -1 -1 0 1;
+10 -262130 -1 -1 1 1;
 #X obj 615 159 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 631 194 metro 1500;
@@ -3006,6 +3006,7 @@ all 1 7 0 10 -262144 -1 -1;
 #X connect 82 0 106 0;
 #X connect 86 0 106 0;
 #X connect 91 0 92 0;
+#X connect 92 0 14 0;
 #X connect 97 0 98 0;
 #X connect 98 0 50 0;
 #X connect 98 0 60 0;
@@ -3042,5 +3043,36 @@ all 1 7 0 10 -262144 -1 -1;
 #X obj 294 50 seq/metro conduite 2;
 #X obj 294 83 seq/metro conduite 3;
 #X obj 26 297 seq/treuil conduite 2;
+#N canvas 0 60 1029 411 tests 0;
+#X obj 229 306 outlet load;
+#X msg 227 237 symbol conduite-test;
+#X obj 72 146 s seq-conduite-line;
+#X msg 73 107 treuil1 autostop \, treuil1 speed 50;
+#X msg 262 156 proj1 diapo speed random 0.2 60 90;
+#X msg 241 177 proj4 diapo speed random 0.2 60 90;
+#X msg 324 93 metro1 5;
+#X msg 495 103 proj3 continu speed random 0.3 20 80 # mode "continu"
+du \, proj3 à vitesse 3 tout de suite \, proj3 mode 104 continu \,
+proj3 lampe 100 1 \, proj3 lampe random 0.53 30 100 # lampe random:
+speed(Hz) val_min val_max;
+#X obj 586 331 s 2StepMotor;
+#X msg 586 292 -1 resetframe \$1;
+#X msg 587 246 75;
+#X msg 627 245 104;
+#X msg 664 243 135;
+#X msg 254 267 symbol conduite-test2;
+#X connect 1 0 0 0;
+#X connect 3 0 2 0;
+#X connect 4 0 2 0;
+#X connect 5 0 2 0;
+#X connect 6 0 2 0;
+#X connect 7 0 2 0;
+#X connect 9 0 8 0;
+#X connect 10 0 9 0;
+#X connect 11 0 9 0;
+#X connect 12 0 9 0;
+#X connect 13 0 0 0;
+#X restore 180 24 pd tests;
 #X connect 2 0 3 0;
 #X connect 16 0 0 0;
+#X connect 21 0 4 4;

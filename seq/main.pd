@@ -1,4 +1,4 @@
-#N canvas 694 330 911 684 10;
+#N canvas 684 322 911 684 10;
 #X obj 30 130 text define \$1;
 #X obj 30 72 symbol \$1;
 #X obj 30 44 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -76,7 +76,7 @@
 #X obj 351 269 r \$1-STOP;
 #X obj 103 264 list trim;
 #X obj 310 159 t b b b;
-#X obj 364 157 s \$1-RELOAD;
+#X obj 375 158 s \$1-RELOAD;
 #X obj 32 361 s \$1-STOP;
 #X obj 763 277 r \$1-PART;
 #X obj 94 358 t b b;
@@ -93,6 +93,7 @@
 #X msg 215 351 0;
 #X obj 683 588 pack f f f, f 19;
 #X obj 683 613 s seq-\$1-time;
+#X obj 772 16 inlet load;
 #X connect 1 0 4 0;
 #X connect 2 0 1 0;
 #X connect 3 0 2 0;
@@ -154,7 +155,6 @@
 #X connect 69 0 83 0;
 #X connect 70 0 19 0;
 #X connect 70 1 49 0;
-#X connect 70 2 71 0;
 #X connect 73 0 65 0;
 #X connect 74 0 76 0;
 #X connect 74 1 75 0;
@@ -174,4 +174,5 @@
 #X connect 84 4 85 0;
 #X connect 85 0 7 0;
 #X connect 86 0 87 0;
+#X connect 88 0 4 0;
 #X coords 0 -1 1 1 230 60 1 300 10;
