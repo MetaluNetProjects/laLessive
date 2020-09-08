@@ -313,6 +313,27 @@ proj6 lampe 75 0
 treuil1 autostop
 treuil2 autostop
 
+######## LONG  FAIRE DES VARIATIONS #####################
+sleep 30
+proj3 diapo speed 57
+proj2 diapo speed 45
+proj5 diapo speed 54
+proj6 diapo speed 52
+sleep 20
+proj1 diapo speed 95
+proj4 diapo speed 102
+proj3 diapo speed 45
+proj2 diapo speed 61
+proj5 diapo speed 57
+proj6 diapo speed 55
+sleep 20
+proj1 diapo speed 101
+proj4 diapo speed 99
+proj3 diapo speed 52
+proj2 diapo speed 65
+proj5 diapo speed 53
+proj6 diapo speed 56
+
 wait proj1 189
 wait proj4 189
 wait proj2 190
@@ -382,7 +403,12 @@ proj6 diapo steps 2
 proj6 mode 220 diapo 1 85 # mode diapo metro1 phase 0 (->frame change au top du métro)
 proj6 lampe 75 0
 
-######## LONG  FAIRE DES VARIATIONS #####################
+sleep 15
+
+proj3 diapo speed random 0.65 40 60
+proj2 diapo speed random 1.3 40 60
+proj5 diapo speed random 0.8 40 60
+proj6 diapo speed random 2.5 40 60
 
 wait proj1 221
 wait proj4 221
@@ -441,11 +467,300 @@ lampe4 0
 sleep 0.5
 
 ############################## FRAME 221 ~ 9mn
-# filer rapide + treuils alea + flash alea jusqu'en 335
-# 335-338 : faire durer, diapo lente et en fondu sur 1-4, filé lent sur les autres avec lum aléa lente
-# noir qq secs
-# filer avec accel tous ensemble jusque 354
 
-# apres: feu puis bombe, à écrire
+# filer rapide + treuils alea + flash alea jusqu'en 335
+
+treuil1 speed 40
+treuil2 speed 40
+
+proj1 mode 335 continu
+routine proj1 file1
+proj2 mode 335 continu
+routine proj2 file1
+proj3 mode 335 continu
+routine proj3 file1
+proj4 mode 335 continu
+routine proj4 file1
+proj5 mode 335 continu
+routine proj5 file1
+proj6 mode 335 continu
+routine proj6 file1
+
+sleep 30
+treuil1 speed 60
+treuil2 speed 60
+routine proj1 file2
+routine proj2 file2
+routine proj3 file2
+routine proj4 file2
+routine proj5 file2
+routine proj6 file2
+
+sleep 30
+treuil1 speed 90
+treuil2 speed 90
+routine proj1 file3
+routine proj2 file3
+routine proj3 file3
+routine proj4 file3
+routine proj5 file3
+routine proj6 file3
+
+wait proj1 335
+wait proj2 335
+wait proj3 335
+wait proj4 335
+wait proj5 335
+wait proj6 335
+
+treuil1 autostop
+treuil2 autostop
+
+wait treuil1
+wait treuil2
+
+############################## FRAME 335 ~ 10mn20
+
+# 335-338 : faire durer, diapo lente et en fondu sur 1-4, filé lent sur les autres avec lum aléa lente
+
+proj1 lampe 100
+proj4 lampe 100
+metro1 10
+proj1 diapo 80 20 30 50 40 # diapo: vitesse défilement film / temps avant allumage / temps d'allumage / temps avant extinction / temps d'extinction (les temps sont en % du temps du métro) 
+proj1 mode 338 diapo 1 0 # mode diapo metro1 phase 0 (->frame change au top du métro)
+proj4 diapo 80 20 30 50 40 # diapo: vitesse défilement film / temps avant allumage / temps d'allumage / temps avant extinction / temps d'extinction (les temps sont en % du temps du métro) 
+proj4 mode 338 diapo 1 50 # mode diapo metro1 phase 0 (->frame change au top du métro)
+
+
+proj2 lampe random 0.3 30 100
+proj2 continu speed 4
+proj2 mode 338 continu
+proj3 lampe random 0.3 30 100
+proj3 continu speed 4
+proj3 mode 338 continu
+proj5 lampe random 0.3 30 100
+proj5 continu speed 4
+proj5 mode 338 continu
+proj6 lampe random 0.3 30 100
+proj6 continu speed 4
+proj6 mode 338 continu
+
+sleep 1
+
+wait proj1 338
+proj1 mode 338 continu
+proj1 lampe flash 30 50 100
+wait proj4 338
+proj4 mode 338 continu
+proj4 lampe flash 30 50 100
+
+proj2 lampe 0 5
+proj3 lampe 0 5
+proj5 lampe 0 5
+proj6 lampe 0 5
+
+sleep 7
+
+############################## FRAME 338
+
+# filer avec accel tous ensemble jusque 354
+proj1 lampe 100
+proj1 continu speed 30
+proj1 continu speed 100 8
+proj1 mode 354 continu
+
+proj4 lampe 100
+proj4 continu speed 30
+proj4 continu speed 100 8
+proj4 mode 354 continu
+
+proj2 lampe 0
+proj2 continu speed 30
+proj2 continu speed 100 8
+proj2 mode 354 continu
+
+proj3 lampe 0
+proj3 continu speed 30
+proj3 continu speed 100 8
+proj3 mode 354 continu
+
+proj5 lampe 0
+proj5 continu speed 30
+proj5 continu speed 100 8
+proj5 mode 354 continu
+
+proj6 lampe 0
+proj6 continu speed 30
+proj6 continu speed 100 8
+proj6 mode 354 continu
+
+############################## FRAME 354
+
+metro1 1.5
+proj1 diapo 100 20 30 50 30 # diapo: vitesse défilement film / temps avant allumage / temps d'allumage / temps avant extinction / temps d'extinction (les temps sont en % du temps du métro) 
+proj1 mode 386 diapo 1 0 # mode diapo metro1 phase 0 (->frame change au top du métro)
+proj4 diapo 100 20 30 50 30 # diapo: vitesse défilement film / temps avant allumage / temps d'allumage / temps avant extinction / temps d'extinction (les temps sont en % du temps du métro) 
+proj4 mode 386 diapo 1 50 # mode diapo metro1 phase 0 (->frame change au top du métro)
+proj1 lampe 100
+proj4 lampe 100
+
+sleep 2
+
+proj2 lampe 0
+proj2 continu speed 5
+proj2 mode 386 continu
+
+proj3 lampe 0
+proj3 continu speed 5
+proj3 mode 386 continu
+
+proj5 lampe 0
+proj5 continu speed 5
+proj5 mode 386 continu
+
+proj6 lampe 0
+proj6 continu speed 5
+proj6 mode 386 continu
+
+proj2 continu speed 50 4
+sleep 1
+proj3 continu speed 50 4
+sleep 1
+proj5 continu speed 50 4
+sleep 1
+proj6 continu speed 50 4
+sleep 4
+
+proj2 continu speed 0 4
+sleep 1
+proj3 continu speed 0 4
+sleep 1
+proj5 continu speed 0 4
+sleep 1
+proj6 continu speed 0 4
+sleep 4
+
+proj2 continu speed 50 4
+sleep 1
+proj3 continu speed 50 4
+sleep 1
+proj5 continu speed 50 4
+sleep 1
+proj6 continu speed 50 4
+sleep 4
+
+proj2 continu speed 0 4
+sleep 1
+proj3 continu speed 0 4
+sleep 1
+proj5 continu speed 0 4
+sleep 1
+proj6 continu speed 0 4
+sleep 4
+
+proj2 continu speed 50 4
+sleep 1
+proj3 continu speed 50 4
+sleep 1
+proj5 continu speed 50 4
+sleep 1
+proj6 continu speed 50 4
+sleep 4
+
+proj2 continu speed 0 4
+sleep 1
+proj3 continu speed 0 4
+sleep 1
+proj5 continu speed 0 4
+sleep 1
+proj6 continu speed 0 4
+sleep 4
+
+proj2 continu speed 50 4
+sleep 1
+proj3 continu speed 50 4
+sleep 1
+proj5 continu speed 50 4
+sleep 1
+proj6 continu speed 50 4
+sleep 4
+
+proj2 continu speed 4 4
+sleep 1
+proj3 continu speed 4 4
+sleep 1
+proj5 continu speed 4 4
+sleep 1
+proj6 continu speed 4 4
+sleep 4
+
+wait proj1 386
+wait proj2 386
+wait proj3 386
+wait proj4 386
+wait proj5 386
+wait proj6 386
+
+############################## FRAME 386
+
+metro1 3
+proj1 diapo 100 15 30 50 40 # diapo: vitesse défilement film / temps avant allumage / temps d'allumage / temps avant extinction / temps d'extinction (les temps sont en % du temps du métro) 
+proj1 mode 402 diapo 1 0 # mode diapo metro1 phase 0 (->frame change au top du métro)
+proj4 diapo 100 15 30 50 40 # diapo: vitesse défilement film / temps avant allumage / temps d'allumage / temps avant extinction / temps d'extinction (les temps sont en % du temps du métro) 
+proj4 mode 402 diapo 1 50 # mode diapo metro1 phase 0 (->frame change au top du métro)
+proj1 lampe 100
+proj4 lampe 100
+
+sleep 12
+metro1 4
+sleep 16
+metro1 5
+sleep 10
+metro1 6
+sleep 12
+metro1 7
+sleep 14
+metro1 8
+
+wait proj1 402
+wait proj4 402
+
+proj1 lampe 0
+proj4 lampe 0
+
+lampe1 100 30
+lampe2 100 30
+lampe3 100 30
+lampe4 100 30
+
+proj1 continu speed 70
+proj1 mode 405 continu
+proj2 continu speed 70
+proj2 mode 405 continu
+proj3 continu speed 70
+proj3 mode 405 continu
+proj4 continu speed 70
+proj4 mode 405 continu
+proj5 continu speed 70
+proj5 mode 405 continu
+proj6 continu speed 70
+proj6 mode 405 continu
+
+sleep 30
+
+wait proj1 405
+wait proj2 405
+wait proj3 405
+wait proj4 405
+wait proj5 405
+wait proj6 405
+
+reset_all_pos
+
+################ ENTRACTE ##########
+
+sleep 10
+
+loop
 
 

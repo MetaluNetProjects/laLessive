@@ -1,10 +1,10 @@
-#N canvas 110 443 374 341 10;
+#N canvas 110 402 498 341 10;
 #X obj 52 45 r seq-\$1-line;
 #X obj 55 267 hsl 120 10 0 1 0 0 Treuil\$2 Treuil\$2 empty -2 -8 0
 10 -261682 -1 -1 0 1;
 #X obj 52 122 rampe \$1;
 #X obj 191 262 tgl 15 0 treuilzero\$2 treuilzero\$2 zero -5 -7 0 10
--260097 -4034 -1 1 1;
+-260097 -4034 -1 0 1;
 #X obj 52 168 s Treuil\$2;
 #X obj 52 65 route treuil\$2;
 #X obj 52 143 / 100;
@@ -16,14 +16,44 @@
 #X msg 140 113 1;
 #X msg 232 182 0;
 #X obj 270 139 r \$1-RESET;
-#X obj 214 226 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 214 226 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 266 265 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 15 111 80;
 #X msg 188 41 autostop \, speed 50;
 #X obj 276 107 change -1;
+#X obj 369 56 route \$2;
+#X obj 369 35 r treuil-control;
+#X obj 348 178 route wait, f 15;
+#N canvas 1 81 450 300 wait 1;
+#X obj 80 33 inlet;
+#X obj 162 214 s \$1-SKIP;
+#X obj 162 108 r treuilzero\$2;
+#X obj 290 41 inlet cancel;
+#X obj 162 151 sel 1;
+#X obj 162 129 f;
+#X obj 162 174 spigot;
+#X obj 80 54 t b b, f 24;
+#X msg 290 62 0;
+#X msg 221 75 1;
+#X connect 0 0 7 0;
+#X connect 2 0 5 0;
+#X connect 3 0 8 0;
+#X connect 4 0 6 0;
+#X connect 5 0 4 0;
+#X connect 6 0 1 0;
+#X connect 7 0 5 0;
+#X connect 7 1 9 0;
+#X connect 8 0 6 1;
+#X connect 9 0 6 1;
+#X restore 348 247 pd wait;
+#X f 15;
+#X obj 348 201 route treuil\$2;
+#X obj 348 226 b;
+#X msg 435 224 bang;
 #X connect 0 0 5 0;
+#X connect 0 0 22 0;
 #X connect 2 0 6 0;
 #X connect 5 0 7 0;
 #X connect 6 0 4 0;
@@ -41,4 +71,12 @@
 #X connect 14 0 13 0;
 #X connect 18 0 7 0;
 #X connect 19 0 9 0;
+#X connect 20 0 4 0;
+#X connect 21 0 20 0;
+#X connect 22 0 24 0;
+#X connect 22 1 26 0;
+#X connect 24 0 25 0;
+#X connect 24 1 26 0;
+#X connect 25 0 23 0;
+#X connect 26 0 23 1;
 #X coords 0 -1 1 1 160 30 1 50 250;
