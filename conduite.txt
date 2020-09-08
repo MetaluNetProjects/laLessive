@@ -676,22 +676,22 @@ sleep 1
 proj6 continu speed 0 4
 sleep 4
 
-proj2 continu speed 50 4
+proj2 continu speed 70 4
 sleep 1
-proj3 continu speed 50 4
+proj3 continu speed 70 4
 sleep 1
-proj5 continu speed 50 4
+proj5 continu speed 70 4
 sleep 1
-proj6 continu speed 50 4
+proj6 continu speed 70 4
 sleep 4
 
-proj2 continu speed 4 4
+proj2 continu speed 30 4
 sleep 1
-proj3 continu speed 4 4
+proj3 continu speed 30 4
 sleep 1
-proj5 continu speed 4 4
+proj5 continu speed 30 4
 sleep 1
-proj6 continu speed 4 4
+proj6 continu speed 30 4
 sleep 4
 
 wait proj1 386

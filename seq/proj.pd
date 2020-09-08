@@ -1,9 +1,9 @@
-#N canvas 630 209 802 662 10;
+#N canvas 553 81 802 662 10;
 #X obj 52 11 r seq-\$1-line;
 #X obj 55 416 hsl 150 10 0 100 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 14900 1;
+-1 -1 0 1;
 #X obj 212 413 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 221 256;
+-262144 -1 -1 410 256;
 #X obj 52 181 r \$0-lampe;
 #X obj 52 458 clip 0 1;
 #X obj 52 479 * 255;
@@ -38,7 +38,7 @@
 #X obj 585 354 t b f b;
 #X obj 632 375 s \$0-stop;
 #X obj 585 333 route nextframe stop;
-#N canvas 990 296 609 453 continu 0;
+#N canvas 746 276 609 453 continu 1;
 #X obj 44 20 inlet;
 #X obj 191 21 r \$0-mode;
 #X obj 44 41 route speed;
@@ -54,7 +54,7 @@
 #X obj 360 229 i;
 #X obj 360 271 <, f 14;
 #X obj 441 248 r \$0-stopframe;
-#X obj 267 379 s \$0-2StepMotor;
+#X obj 215 372 s \$0-2StepMotor;
 #X obj 94 260 s \$0-2StepMotor;
 #X msg 94 237 speed \$1;
 #X msg 360 336 inc 1;
@@ -69,19 +69,24 @@
 #X floatatom 49 248 5 0 0 0 - - -;
 #X obj 191 42 route continu;
 #X obj 419 103 print;
-#X obj 224 104 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 224 104 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X msg 98 68 stop;
+#X msg 93 67 stop;
 #X obj 428 368 s \$0-stop;
 #X obj 360 293 sel 1 0, f 14;
-#X obj 227 373 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 391 383 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 248 213 r \$0-stopframe;
 #X obj 233 238 f;
-#X obj 233 261 -;
-#X msg 233 311 inc \$1;
-#X obj 233 286 max 0;
+#X obj 276 275 -;
+#X msg 276 325 inc \$1;
+#X obj 276 300 max 0;
 #X msg 97 353 100;
+#X floatatom 321 330 5 0 0 0 - - -;
+#X floatatom 278 256 5 0 0 0 - - -;
+#X floatatom 322 356 5 0 0 0 - - -;
+#X floatatom 186 286 5 0 0 0 - - -;
+#X msg 215 344 frame \$1;
 #X connect 0 0 2 0;
 #X connect 1 0 28 0;
 #X connect 2 0 23 0;
@@ -119,13 +124,16 @@
 #X connect 28 1 5 0;
 #X connect 31 0 23 0;
 #X connect 33 0 22 0;
-#X connect 33 1 32 0;
 #X connect 35 0 36 1;
-#X connect 36 0 37 0;
+#X connect 35 0 42 0;
+#X connect 36 0 44 0;
+#X connect 36 0 45 0;
 #X connect 37 0 39 0;
-#X connect 38 0 15 0;
+#X connect 37 0 41 0;
 #X connect 39 0 38 0;
+#X connect 39 0 43 0;
 #X connect 40 0 26 0;
+#X connect 45 0 15 0;
 #X restore 491 529 pd continu;
 #X obj 380 502 route mode diapo continu;
 #X obj 414 626 s \$0-mode;
