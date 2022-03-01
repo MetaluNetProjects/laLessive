@@ -1,8 +1,8 @@
-#N canvas 930 194 715 527 12;
+#N canvas 1177 144 715 732 12;
 #X declare -path Fraise;
-#X obj 22 207 fruit/receive fruit1;
+#X obj 22 187 fruit/receive fruit1;
 #X obj 340 254 fruit/send2 fruit1;
-#X obj 21 38 pied/pied 0 41424;
+#X obj 10 33 pied/pied 0 41424;
 #X msg 440 150 c 120 c 4 i \$1;
 #X obj 443 126 hsl 128 15 0 1023 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
@@ -11,18 +11,18 @@
 #X msg 440 212 c 121 c 4 i \$1;
 #X msg 412 99 0;
 #X obj 19 9 declare -path Fraise;
-#X obj 19 141 fruit/fruit 1 fruit1 10 lessiveFW;
-#X obj 22 256 route 0 1 2;
-#X obj 22 432 change -1;
-#X obj 46 364 change -1;
-#X obj 71 289 change -1;
-#X obj 46 387 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 19 121 fruit/fruit 1 fruit1 10 lessiveFW;
+#X obj 22 236 route 0 1 2;
+#X obj 22 434 change -1;
+#X obj 46 340 change -1;
+#X obj 71 269 change -1;
+#X obj 46 389 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 22 456 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 22 478 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 71 313 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 71 293 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 71 333 s startstopButton;
+#X obj 71 313 s startstopButton;
 #X msg 285 142 c 30 i \$1 c \$2;
 #X obj 285 98 r toDMXfraise;
 #X obj 327 403 hsl 128 15 0 255 0 0 empty empty empty -2 -8 0 10 -262144
@@ -40,16 +40,84 @@
 #X msg 507 404 1 \$1 \, 2 \$1 \, 3 \$1 \, 4 \$1 \, 5 \$1;
 #X msg 503 369 1 \$1;
 #X obj 238 265 print;
-#X obj 22 232 route s present;
-#X obj 115 254 s DMXdriverOK;
+#X obj 22 212 route s present;
+#X obj 115 234 s DMXdriverOK;
 #X obj 463 69 clip 0 1;
 #X obj 463 94 * 1023;
 #X obj 549 66 clip 0 1;
 #X obj 549 91 * 1023;
 #X obj 463 44 r Treuil1;
 #X obj 549 40 r Treuil2;
-#X obj 22 475 s treuilzero1;
-#X obj 46 407 s treuilzero2;
+#X obj 22 497 s treuilzero1;
+#X obj 46 409 s treuilzero2;
+#X floatatom 146 354 5 0 0 0 - - -;
+#N canvas 1 81 450 300 debounce 0;
+#X obj 96 16 inlet;
+#X obj 96 40 sel 0 1, f 21;
+#X obj 96 98 del 100;
+#X msg 96 122 0;
+#X obj 168 98 del 100;
+#X msg 168 122 1;
+#X msg 109 66 stop;
+#X msg 149 67 stop;
+#X obj 96 146 change -1;
+#X obj 96 170 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 6 0;
+#X connect 1 1 7 0;
+#X connect 1 1 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 8 0;
+#X connect 4 0 5 0;
+#X connect 5 0 8 0;
+#X connect 6 0 4 0;
+#X connect 7 0 2 0;
+#X connect 8 0 9 0;
+#X restore 46 364 pd debounce;
+#N canvas 1 81 450 300 debounce 0;
+#X obj 96 16 inlet;
+#X obj 96 40 sel 0 1, f 21;
+#X obj 96 98 del 100;
+#X msg 96 122 0;
+#X obj 168 98 del 100;
+#X msg 168 122 1;
+#X msg 109 66 stop;
+#X msg 149 67 stop;
+#X obj 96 146 change -1;
+#X obj 96 170 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 6 0;
+#X connect 1 1 7 0;
+#X connect 1 1 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 8 0;
+#X connect 4 0 5 0;
+#X connect 5 0 8 0;
+#X connect 6 0 4 0;
+#X connect 7 0 2 0;
+#X connect 8 0 9 0;
+#X restore 22 456 pd debounce;
+#X obj 628 38 r Coil;
+#X msg 628 97 C\$1;
+#X obj 628 67 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 599 186 r DMXdriverOK;
+#X obj 599 210 sel 1;
+#X msg 599 234 1;
+#X obj 599 255 s Coil;
+#X obj 234 301 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 165 552 hsl 200 30 0 255 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 162 587 list prepend 51;
+#X obj 373 550 hradio 30 1 0 6 empty empty empty 0 -8 0 10 -262144
+-1 -1 2;
+#X obj 373 585 + 51;
+#X obj 564 548 nbx 5 30 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 18
+-262144 -1 -1 0 256;
+#X obj 161 612 s toDMXfraise;
 #X connect 0 0 32 0;
 #X connect 3 0 1 0;
 #X connect 4 0 3 0;
@@ -59,9 +127,10 @@
 #X connect 7 0 5 0;
 #X connect 10 0 11 0;
 #X connect 10 1 12 0;
+#X connect 10 1 42 0;
 #X connect 10 2 13 0;
-#X connect 11 0 15 0;
-#X connect 12 0 14 0;
+#X connect 11 0 44 0;
+#X connect 12 0 43 0;
 #X connect 13 0 16 0;
 #X connect 14 0 41 0;
 #X connect 15 0 40 0;
@@ -85,3 +154,16 @@
 #X connect 37 0 5 0;
 #X connect 38 0 34 0;
 #X connect 39 0 36 0;
+#X connect 43 0 14 0;
+#X connect 44 0 15 0;
+#X connect 45 0 47 0;
+#X connect 46 0 1 1;
+#X connect 47 0 46 0;
+#X connect 48 0 49 0;
+#X connect 49 0 50 0;
+#X connect 50 0 51 0;
+#X connect 53 0 54 0;
+#X connect 54 0 58 0;
+#X connect 55 0 56 0;
+#X connect 56 0 57 0;
+#X connect 56 0 54 1;

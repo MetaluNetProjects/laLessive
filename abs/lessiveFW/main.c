@@ -19,12 +19,16 @@ void setup(void) {
 //----------- Setup ----------------
 	fruitInit();
 			
-	//pinModeDigitalOut(LED); 	// set the LED pin mode to digital out
-	//digitalClear(LED);		// clear the LED
+	//pinModeDigitalOut(LED); 		// set the LED pin mode to digital out
+	//digitalClear(LED);			// clear the LED
 	delayStart(mainDelay, 5000); 	// init the mainDelay to 5 ms
 
+	digitalClear(COIL);				// switch the COIL off
+	pinModeDigitalOut(COIL); 		// set the COIL pin mode to digital out
+	digitalClear(COIL);				// switch the COIL off
+
 //----------- Switch module setup ----------
-	switchInit();		// init analog module
+	switchInit();					// init analog module
 	switchSelect(0, MOTC_ZERO);
 	switchSelect(1, MOTD_ZERO);
 	switchSelect(2, START_SWITCH);
@@ -39,9 +43,9 @@ void setup(void) {
 
 void loop() {
 // ---------- Main loop ------------
-	fraiseService();	// listen to Fraise events
-	switchService();	// analog management routine
-	DMXService();		// DXM management routine
+	fraiseService();				// listen to Fraise events
+	switchService();				// analog management routine
+	DMXService();					// DXM management routine
 
 	if(delayFinished(mainDelay)) // when mainDelay triggers :
 	{
@@ -69,14 +73,18 @@ void fraiseReceiveChar() // receive text
 	c=fraiseGetChar();
 	if(c=='L'){		//switch LED on/off 
 		c=fraiseGetChar();
-		//digitalWrite(LED, c!='0');		
+		//digitalWrite(LED, c!='0');
 	}
-	else if(c=='E') { 	// echo text (send it back to host)
+	else if(c=='E') { 							// echo text (send it back to host)
 		printf("C");
-		c = fraiseGetLen(); 			// get length of current packet
+		c = fraiseGetLen(); 					// get length of current packet
 		while(c--) printf("%c",fraiseGetChar());// send each received byte
-		putchar('\n');				// end of line
-	}	
+		putchar('\n');							// end of line
+	}
+	else if(c=='C'){							//switch COIL on/off 
+		c=fraiseGetChar();
+		digitalWrite(COIL, c!='0');
+	}
 }
 
 void fraiseReceive() // receive raw

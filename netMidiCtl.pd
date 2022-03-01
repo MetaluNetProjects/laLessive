@@ -1,0 +1,8 @@
+#N canvas 0 93 450 300 10;
+#X obj 123 66 netreceive 18080;
+#X obj 123 192 s \$1-2StepMotor;
+#X obj 123 113 route M L, f 28;
+#X obj 226 191 s projlampe;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 2 1 3 0;

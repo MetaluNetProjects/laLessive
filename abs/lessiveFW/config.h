@@ -13,6 +13,7 @@
 #define MOTD_B KZ1
 #define MOTD_ZERO K6
 
+#define COIL K8
 #define START_SWITCH K9
 
 //DMX config:
