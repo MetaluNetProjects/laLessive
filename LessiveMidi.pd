@@ -1,38 +1,31 @@
-#N canvas 1028 111 833 722 12;
+#N canvas 1028 111 833 801 12;
 #X declare -path hcs -path ggee -path moonlib;
 #X obj 71 11 notein, f 10;
-#X obj 115 651 netsend;
-#X obj 115 677 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X msg 191 606 disconnect;
-#X msg 181 582 connect 192.168.5.1 18080;
-#X obj 116 534 list prepend send;
-#X obj 116 559 list trim;
 #X obj 71 36 pack f f f;
-#X obj 21 76 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
+#X obj 21 76 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
 #X msg 71 65 \$2 \$3 \$1;
 #X obj 71 90 route 0;
 #X obj 132 122 list split 1;
 #X obj 171 174 route 1 2 3 4 5 6;
-#X obj 174 211 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 1;
+#X obj 174 211 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
+#000000 #000000 0;
 #X obj 176 232 * 12;
 #X msg 151 284 1 \$1;
-#X obj 228 237 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 1;
+#X obj 228 237 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
+#000000 #000000 0;
 #X obj 230 258 * 12;
-#X obj 282 269 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 1;
+#X obj 282 269 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
+#000000 #000000 0;
 #X obj 284 290 * 12;
-#X obj 336 295 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 1;
+#X obj 336 295 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
+#000000 #000000 0;
 #X obj 338 316 * 12;
-#X obj 388 334 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 1;
+#X obj 388 334 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
+#000000 #000000 0;
 #X obj 390 355 * 12;
-#X obj 442 360 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 1;
+#X obj 442 360 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
+#000000 #000000 0;
 #X obj 444 381 * 12;
 #X msg 205 310 2 \$1;
 #X msg 259 342 3 \$1;
@@ -51,17 +44,16 @@
 #X obj 313 343 + 12;
 #X obj 365 382 + 12;
 #X obj 419 408 + 12;
-#X obj 295 534 loadbang;
 #X msg 19 195 M \$1 speed 0 \, L \$1 0;
 #X msg 151 492 M \$1 speed \$2 \, M \$1 pos 1e+06 \, L \$1 1;
-#X floatatom 304 432 5 0 0 0 - - -;
-#X msg 444 52 M -1 speed 0 \, M -1 resetpos 0;
-#X obj 321 58 midiplay;
+#X floatatom 304 432 5 0 0 0 - - - 0;
+#X msg 446 92 M -1 speed 0 \, M -1 resetpos 0;
+#X obj 323 96 midiplay;
 #N canvas 1 81 460 603 list-midifiles 0;
 #X obj 138 181 folder_list;
 #X obj 212 131 getdir;
-#X obj 280 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 280 106 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X msg 212 155 symbol \$1/midifiles/*.mid;
 #X obj 180 63 loadbang;
 #X obj 97 19 declare -path hcs -path ggee -path moonlib;
@@ -71,8 +63,8 @@
 #X obj 115 151 t b b b;
 #X msg 238 231 list;
 #X obj 115 288 list, f 16;
-#X obj 115 108 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 115 108 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 138 255 list prepend;
 #X obj 115 322 s midifiles;
 #X obj 180 99 t b b;
@@ -81,9 +73,10 @@
 #X obj 154 498 list split;
 #X obj 187 523 list split 1;
 #X obj 154 424 t b f;
-#X obj 154 396 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
-#X symbolatom 185 566 0 0 0 0 - - -;
+#X obj 154 396 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
+#000000 #000000 0;
+#X symbolatom 185 566 0 0 0 0 - - - 0;
+#X obj 38 62 r refresh-midifiles;
 #X connect 0 0 6 0;
 #X connect 1 0 3 0;
 #X connect 2 0 1 0;
@@ -109,59 +102,107 @@
 #X connect 20 0 17 0;
 #X connect 20 1 18 1;
 #X connect 21 0 20 0;
+#X connect 23 0 12 0;
 #X restore 320 27 pd list-midifiles;
-#X connect 0 0 7 0;
-#X connect 0 1 7 1;
-#X connect 0 2 7 2;
+#N canvas 372 87 610 467 midifile-choice 0;
+#X obj 170 123 r midifiles;
+#X obj 145 148 list;
+#X obj 145 172 list split;
+#X obj 178 197 list split 1;
+#X obj 145 98 t b f;
+#X obj 162 65 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc #000000
+#000000 0;
+#X symbolatom 57 312 0 0 0 0 - - - 0;
+#X obj 145 29 r midifile-choice;
+#X obj 254 258 symbol;
+#X obj 396 16 r midifile-play;
+#X msg 491 150 play 0;
+#X obj 396 68 sel 1 0;
+#X obj 459 108 t b b;
+#X obj 275 390 outlet;
+#X obj 459 397 outlet reset;
+#X obj 396 42 change;
+#X msg 254 282 open midifiles/\$1 \, play 1;
+#X connect 0 0 1 1;
 #X connect 1 0 2 0;
-#X connect 3 0 1 0;
+#X connect 2 1 3 0;
+#X connect 3 0 6 0;
+#X connect 3 0 8 1;
 #X connect 4 0 1 0;
-#X connect 5 0 6 0;
-#X connect 6 0 1 0;
-#X connect 7 0 9 0;
-#X connect 9 0 10 0;
-#X connect 10 0 44 0;
-#X connect 10 1 11 0;
+#X connect 4 1 2 1;
+#X connect 5 0 4 0;
+#X connect 7 0 4 0;
+#X connect 8 0 16 0;
+#X connect 9 0 15 0;
+#X connect 10 0 13 0;
+#X connect 11 0 8 0;
 #X connect 11 1 12 0;
-#X connect 12 0 37 0;
-#X connect 12 1 38 0;
-#X connect 12 2 39 0;
-#X connect 12 3 40 0;
-#X connect 12 4 41 0;
-#X connect 12 5 42 0;
-#X connect 13 0 14 0;
-#X connect 14 0 37 1;
-#X connect 15 0 31 0;
+#X connect 12 0 14 0;
+#X connect 12 1 10 0;
+#X connect 15 0 11 0;
+#X connect 16 0 13 0;
+#X restore 323 63 pd midifile-choice;
+#X obj 323 121 route note;
+#X msg 323 145 \$2 \$3 \$1;
+#X obj 116 638 s \$1-2StepMotor;
+#X obj 116 559 route M L, f 28;
+#X obj 234 638 s projlampe;
+#X obj 116 534 t a;
+#X obj 289 704 print;
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
+#X connect 0 2 1 2;
+#X connect 1 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 37 0;
+#X connect 4 1 5 0;
+#X connect 5 1 6 0;
+#X connect 6 0 31 0;
+#X connect 6 1 32 0;
+#X connect 6 2 33 0;
+#X connect 6 3 34 0;
+#X connect 6 4 35 0;
+#X connect 6 5 36 0;
+#X connect 7 0 8 0;
+#X connect 8 0 31 1;
+#X connect 9 0 25 0;
+#X connect 10 0 11 0;
+#X connect 11 0 32 1;
+#X connect 12 0 13 0;
+#X connect 13 0 33 1;
+#X connect 14 0 15 0;
+#X connect 15 0 34 1;
 #X connect 16 0 17 0;
-#X connect 17 0 38 1;
+#X connect 17 0 35 1;
 #X connect 18 0 19 0;
-#X connect 19 0 39 1;
-#X connect 20 0 21 0;
-#X connect 21 0 40 1;
-#X connect 22 0 23 0;
-#X connect 23 0 41 1;
+#X connect 19 0 36 1;
+#X connect 20 0 25 0;
+#X connect 21 0 25 0;
+#X connect 22 0 25 0;
+#X connect 23 0 25 0;
 #X connect 24 0 25 0;
-#X connect 25 0 42 1;
-#X connect 26 0 31 0;
-#X connect 27 0 31 0;
-#X connect 28 0 31 0;
-#X connect 29 0 31 0;
-#X connect 30 0 31 0;
-#X connect 31 0 32 0;
-#X connect 32 0 35 0;
-#X connect 32 1 36 0;
-#X connect 33 0 34 0;
-#X connect 34 0 35 1;
-#X connect 35 0 45 0;
-#X connect 36 0 33 0;
-#X connect 37 0 15 0;
-#X connect 38 0 26 0;
-#X connect 39 0 27 0;
-#X connect 40 0 28 0;
-#X connect 40 0 46 0;
-#X connect 41 0 29 0;
-#X connect 42 0 30 0;
-#X connect 43 0 4 0;
-#X connect 44 0 5 0;
-#X connect 45 0 5 0;
-#X connect 47 0 5 0;
+#X connect 25 0 26 0;
+#X connect 26 0 29 0;
+#X connect 26 1 30 0;
+#X connect 27 0 28 0;
+#X connect 28 0 29 1;
+#X connect 29 0 38 0;
+#X connect 30 0 27 0;
+#X connect 31 0 9 0;
+#X connect 32 0 20 0;
+#X connect 33 0 21 0;
+#X connect 34 0 22 0;
+#X connect 34 0 39 0;
+#X connect 35 0 23 0;
+#X connect 36 0 24 0;
+#X connect 37 0 49 0;
+#X connect 38 0 49 0;
+#X connect 40 0 49 0;
+#X connect 41 0 44 0;
+#X connect 43 0 41 0;
+#X connect 43 1 40 0;
+#X connect 44 0 45 0;
+#X connect 45 0 3 0;
+#X connect 47 0 46 0;
+#X connect 47 1 48 0;
+#X connect 49 0 47 0;

@@ -3,22 +3,22 @@
 #X obj 65 57 oscparse;
 #X obj 65 258 netsend -u -b;
 #X msg 80 235 connect localhost 8283;
-#X obj 65 288 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
+#X obj 65 288 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 562 52 oscformat fader_1;
 #X obj 65 164 list prepend send;
 #X obj 65 188 list trim;
-#X obj 565 30 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+#X obj 565 30 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
 #X obj 140 186 loadbang;
 #X obj 65 81 list trim;
-#X obj 666 170 hsl 128 15 0 100 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+#X obj 666 170 hsl 128 15 0 100 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
 #X obj 673 238 s proj-control;
 #X msg 673 213 1 lampe \$1;
 #X obj 65 105 s \$0-fromOSC;
 #X obj 65 137 r \$0-toOSC;
-#N canvas 1 81 655 262 frame 0;
+#N canvas 1 82 655 262 frame 0;
 #X obj 46 65 route prevprev prev next nextnext;
 #X msg 46 117 -20;
 #X msg 103 117 -1;
@@ -34,8 +34,8 @@
 #X obj 46 42 r \$0-fromOSC;
 #X obj 323 131 oscformat image_1;
 #X msg 323 105 symbol img/\$1.jpg;
-#X obj 323 51 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
--1 2;
+#X obj 323 51 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc #000000
+#000000 0;
 #X obj 458 133 oscformat frame;
 #X obj 503 39 r \$0-framenum;
 #X obj 503 63 change;
@@ -65,11 +65,11 @@
 #X connect 18 0 16 0;
 #X connect 18 0 14 0;
 #X restore 335 63 pd frame;
-#N canvas 1 81 755 300 proj 0;
+#N canvas 965 107 755 300 proj 0;
 #X obj 24 17 r \$0-fromOSC;
 #X obj 24 41 route projector;
 #X obj 24 65 s \$0-projnum;
-#X floatatom 75 108 5 0 0 0 - - -;
+#X floatatom 75 108 5 0 0 0 - - - 0;
 #X obj 205 18 r StepMotor;
 #X obj 205 42 route 1;
 #X obj 205 66 route simulpos;
@@ -83,8 +83,8 @@
 #X obj 205 189 s \$0-toOSC;
 #X obj 205 165 oscformat pframe;
 #X obj 205 90 / 400;
-#X symbolatom 378 219 10 0 0 0 - - -;
-#X floatatom 371 98 5 0 0 0 - - -;
+#X symbolatom 378 219 10 0 0 0 - - - 0;
+#X floatatom 371 98 5 0 0 0 - - - 0;
 #X msg 397 130 12.123;
 #X obj 205 127 makefilename F:%06.02f;
 #X obj 137 228 s \$0-simulframe;
@@ -107,7 +107,7 @@
 #X connect 19 0 18 0;
 #X connect 20 0 15 0;
 #X restore 335 39 pd proj;
-#N canvas 81 206 450 300 lampe 0;
+#N canvas 71 196 450 300 lampe 0;
 #X obj 214 58 r \$0-projnum;
 #X obj 82 32 r \$0-fromOSC;
 #X obj 82 56 route proj_light;
@@ -132,13 +132,13 @@
 #X connect 10 0 9 0;
 #X connect 11 0 10 0;
 #X restore 335 88 pd lampe;
-#N canvas 704 451 661 292 adjust_frame 0;
+#N canvas 694 441 661 292 adjust_frame 0;
 #X obj 46 42 r \$0-fromOSC;
 #X obj 46 65 route fine skipframe setframe;
 #X obj 264 196 r \$0-projnum;
 #X obj 169 222 list prepend 1;
-#X obj 41 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 41 205 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X msg 67 154 fine \$1;
 #X obj 169 246 s proj-control;
 #X obj 132 114 sel 1;
@@ -162,7 +162,7 @@
 #X connect 11 0 10 0;
 #X connect 12 0 3 0;
 #X restore 336 114 pd adjust_frame;
-#N canvas 312 654 363 384 return_zero 0;
+#N canvas 302 671 363 384 return_zero 0;
 #X obj 154 27 r proj-loopnbframes;
 #X obj 154 51 * 400;
 #X obj 97 257 f;
@@ -175,7 +175,7 @@
 #X obj 42 93 r \$0-simulframe;
 #X obj 24 146 f;
 #X obj 42 122 i;
-#X floatatom 90 160 5 0 0 0 - - -;
+#X floatatom 90 160 5 0 0 0 - - - 0;
 #X msg 15 260 resetpos 0;
 #X obj 24 170 sel 405;
 #X obj 70 197 sel 0;
@@ -200,7 +200,7 @@
 #X connect 16 0 2 0;
 #X connect 17 0 6 0;
 #X restore 337 148 pd return_zero;
-#N canvas 3 81 819 296 seq 0;
+#N canvas 1 82 819 296 seq 0;
 #X obj 82 18 r \$0-fromOSC;
 #X obj 82 248 s conduite-STOP;
 #X obj 144 129 t b b b;
@@ -213,7 +213,7 @@
 #X obj 375 143 oscformat seqline;
 #X obj 547 58 unpack f f, f 19;
 #X obj 547 159 oscformat seqtime;
-#X floatatom 443 119 5 0 0 0 - - -;
+#X floatatom 443 119 5 0 0 0 - - - 0;
 #X obj 547 32 r seq-conduite-time;
 #X obj 375 72 r seq-conduite-getline;
 #X obj 547 83 makefilename %02d;
@@ -275,6 +275,53 @@
 #X connect 15 0 10 1;
 #X restore 339 212 pd lampes/treuils;
 #X obj 140 210 del 3000;
+#N canvas 389 213 445 551 midifile 1;
+#X obj 62 467 s \$0-toOSC;
+#X obj 45 19 r \$0-fromOSC;
+#X obj 45 74 list split 1;
+#X obj 45 98 f;
+#X obj 70 148 r midifiles;
+#X obj 45 173 list;
+#X obj 45 197 list split;
+#X obj 78 222 list split 1;
+#X obj 45 123 t b f;
+#X listbox 78 418 20 0 0 0 - - - 0;
+#X obj 78 259 list fromsymbol;
+#X obj 78 359 list split;
+#X obj 78 282 t a a;
+#X obj 110 305 list length;
+#X obj 110 329 - 4;
+#X obj 78 389 list tosymbol;
+#X obj 62 443 oscformat midisongname;
+#X obj 257 146 s refresh-midifiles;
+#X obj 45 46 route midisongs midiplay;
+#X obj 301 325 s midifile-play;
+#X obj 180 91 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 100 125 s midifile-choice;
+#X connect 1 0 18 0;
+#X connect 2 0 3 0;
+#X connect 3 0 8 0;
+#X connect 3 0 21 0;
+#X connect 4 0 5 1;
+#X connect 5 0 6 0;
+#X connect 6 1 7 0;
+#X connect 7 0 10 0;
+#X connect 8 0 5 0;
+#X connect 8 1 6 1;
+#X connect 10 0 12 0;
+#X connect 11 0 15 0;
+#X connect 12 0 11 0;
+#X connect 12 1 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 11 1;
+#X connect 15 0 9 0;
+#X connect 15 0 16 0;
+#X connect 16 0 0 0;
+#X connect 18 0 2 0;
+#X connect 18 1 20 0;
+#X connect 20 0 19 0;
+#X restore 338 263 pd midifile;
 #X connect 0 0 1 0;
 #X connect 1 0 10 0;
 #X connect 2 0 4 0;
