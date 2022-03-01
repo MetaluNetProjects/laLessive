@@ -1,8 +1,8 @@
-#N canvas 394 392 516 459 10;
+#N canvas 450 70 516 459 10;
 #X declare -path abs;
 #X declare -path maxlib -path moonlib -path ggee -path iemlib -lib
 iemlib -lib zexy -path motex;
-#N canvas 425 345 946 634 guts 0;
+#N canvas 147 235 946 634 guts 0;
 #X obj 112 245 * 1.8;
 #X floatatom 112 267 5 0 0 0 - - - 0;
 #X text 147 269 tr/mn;
@@ -197,6 +197,7 @@ LumMaster 0 -9 1 10 #f8fc00 #000000 #000000 12700 1;
 #X obj 240 383 * 100;
 #X floatatom 245 410 5 0 0 0 - - - 0;
 #X obj 236 208 r projlampe;
+#X obj 337 363 print;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
