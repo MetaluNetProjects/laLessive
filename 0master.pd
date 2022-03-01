@@ -1,8 +1,8 @@
-#N canvas 744 266 700 487 10;
+#N canvas 804 419 700 487 10;
 #X declare -path abs;
 #X declare -path maxlib -path moonlib -path ggee -path iemlib -lib
 iemlib -lib zexy -path motex;
-#N canvas 379 93 946 634 guts 1;
+#N canvas 425 345 946 634 guts 0;
 #X obj 112 245 * 1.8;
 #X floatatom 112 267 5 0 0 0 - - -;
 #X text 147 269 tr/mn;
@@ -11,7 +11,7 @@ iemlib -lib zexy -path motex;
 #X floatatom 112 334 5 0 0 0 - - -;
 #X text 147 333 step/s;
 #X obj 145 142 nbx 5 14 -1e+37 1e+37 0 0 \$0-Frame-snd \$0-Frame-rcv
-Frame 0 -8 0 10 -260097 -1 -1 5 256;
+Frame 0 -8 0 10 -260097 -1 -1 0 256;
 #X obj 143 177 nbx 5 14 0 255 0 0 \$0-Speed-snd \$0-Speed-rcv Speed
 0 -8 0 10 -204786 -1 -1 60 256;
 #X obj 144 215 nbx 5 14 1 255 0 0 \$0-Light-snd \$0-Light-rcv Light
@@ -2309,7 +2309,7 @@ all 1 7 0 10 -262144 -1 -1;
 #X obj 451 223 StepMotor \$0 4 41;
 #X obj 451 263 StepMotor \$0 6 17;
 #X obj 567 505 loadbang;
-#N canvas 876 93 522 338 Net 1;
+#N canvas 876 93 522 338 Net 0;
 #X obj 33 251 r \$0-toDMX2;
 #X obj 33 275 route D;
 #X obj 33 307 s \$0-setchannel;
@@ -2822,7 +2822,7 @@ all 1 7 0 10 -262144 -1 -1;
 #X obj 702 319 tgl 15 0 treuilzero1 treuilzero1 treuilzero1 0 -7 0
 10 -262130 -1 -1 0 1;
 #X obj 702 353 tgl 15 0 treuilzero2 treuilzero2 treuilzero2 0 -7 0
-10 -262130 -1 -1 1 1;
+10 -262130 -1 -1 0 1;
 #X obj 615 159 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 631 194 metro 1500;
@@ -3274,5 +3274,6 @@ var1 100 1 4 \, lampe flash 10 20 100, f 31;
 #X connect 6 0 5 1;
 #X restore 27 28 pd start/stop;
 #X obj 325 381 netMidiCtl \$0;
+#X obj 321 409 LessiveMidi;
 #X connect 10 0 0 0;
 #X connect 13 0 2 4;
