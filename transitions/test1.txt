@@ -1,0 +1,6 @@
+projall continu speed 3 0 # mode "continu" du proj3 à vitesse 3 tout de suite
+projall continu speed 45 48 # mode "continu" du proj3 à vitesse 3
+projall mode 74 continu
+projall lampe 100 1
+projall lampe random 0.5 30 100 # lampe random: speed(Hz) val_min val_max
+

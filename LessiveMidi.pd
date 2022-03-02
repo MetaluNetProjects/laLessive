@@ -1,31 +1,31 @@
-#N canvas 1028 111 833 801 12;
+#N canvas 1056 323 833 801 12;
 #X declare -path hcs -path ggee -path moonlib;
 #X obj 71 11 notein, f 10;
 #X obj 71 36 pack f f f;
-#X obj 21 76 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 21 76 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X msg 71 65 \$2 \$3 \$1;
 #X obj 71 90 route 0;
 #X obj 132 122 list split 1;
 #X obj 171 174 route 1 2 3 4 5 6;
-#X obj 174 211 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 0;
+#X obj 174 211 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
 #X obj 176 232 * 12;
 #X msg 151 284 1 \$1;
-#X obj 228 237 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 0;
+#X obj 228 237 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
 #X obj 230 258 * 12;
-#X obj 282 269 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 0;
+#X obj 282 269 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
 #X obj 284 290 * 12;
-#X obj 336 295 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 0;
+#X obj 336 295 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
 #X obj 338 316 * 12;
-#X obj 388 334 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 0;
+#X obj 388 334 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
 #X obj 390 355 * 12;
-#X obj 442 360 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 0;
+#X obj 442 360 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
 #X obj 444 381 * 12;
 #X msg 205 310 2 \$1;
 #X msg 259 342 3 \$1;
@@ -46,14 +46,13 @@
 #X obj 419 408 + 12;
 #X msg 19 195 M \$1 speed 0 \, L \$1 0;
 #X msg 151 492 M \$1 speed \$2 \, M \$1 pos 1e+06 \, L \$1 1;
-#X floatatom 304 432 5 0 0 0 - - - 0;
-#X msg 446 92 M -1 speed 0 \, M -1 resetpos 0;
+#X floatatom 304 432 5 0 0 0 - - -;
 #X obj 323 96 midiplay;
 #N canvas 1 81 460 603 list-midifiles 0;
 #X obj 138 181 folder_list;
 #X obj 212 131 getdir;
-#X obj 280 106 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 280 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X msg 212 155 symbol \$1/midifiles/*.mid;
 #X obj 180 63 loadbang;
 #X obj 97 19 declare -path hcs -path ggee -path moonlib;
@@ -63,8 +62,8 @@
 #X obj 115 151 t b b b;
 #X msg 238 231 list;
 #X obj 115 288 list, f 16;
-#X obj 115 108 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 115 108 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X obj 138 255 list prepend;
 #X obj 115 322 s midifiles;
 #X obj 180 99 t b b;
@@ -73,9 +72,9 @@
 #X obj 154 498 list split;
 #X obj 187 523 list split 1;
 #X obj 154 424 t b f;
-#X obj 154 396 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 0;
-#X symbolatom 185 566 0 0 0 0 - - - 0;
+#X obj 154 396 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X symbolatom 185 566 0 0 0 0 - - -;
 #X obj 38 62 r refresh-midifiles;
 #X connect 0 0 6 0;
 #X connect 1 0 3 0;
@@ -104,15 +103,15 @@
 #X connect 21 0 20 0;
 #X connect 23 0 12 0;
 #X restore 320 27 pd list-midifiles;
-#N canvas 372 87 610 467 midifile-choice 0;
+#N canvas 417 353 610 467 midifile-choice 0;
 #X obj 170 123 r midifiles;
 #X obj 145 148 list;
 #X obj 145 172 list split;
 #X obj 178 197 list split 1;
 #X obj 145 98 t b f;
-#X obj 162 65 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc #000000
-#000000 0;
-#X symbolatom 57 312 0 0 0 0 - - - 0;
+#X obj 162 65 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X symbolatom 57 312 0 0 0 0 - - -;
 #X obj 145 29 r midifile-choice;
 #X obj 254 258 symbol;
 #X obj 396 16 r midifile-play;
@@ -123,6 +122,8 @@
 #X obj 459 397 outlet reset;
 #X obj 396 42 change;
 #X msg 254 282 open midifiles/\$1 \, play 1;
+#X obj 492 286 s conduite-STOP;
+#X obj 325 163 t b b;
 #X connect 0 0 1 1;
 #X connect 1 0 2 0;
 #X connect 2 1 3 0;
@@ -135,13 +136,15 @@
 #X connect 8 0 16 0;
 #X connect 9 0 15 0;
 #X connect 10 0 13 0;
-#X connect 11 0 8 0;
+#X connect 11 0 18 0;
 #X connect 11 1 12 0;
 #X connect 12 0 14 0;
 #X connect 12 1 10 0;
 #X connect 15 0 11 0;
 #X connect 16 0 13 0;
-#X restore 323 63 pd midifile-choice;
+#X connect 18 0 8 0;
+#X connect 18 1 17 0;
+#X restore 323 62 pd midifile-choice;
 #X obj 323 121 route note;
 #X msg 323 145 \$2 \$3 \$1;
 #X obj 116 638 s \$1-2StepMotor;
@@ -149,6 +152,9 @@
 #X obj 234 638 s projlampe;
 #X obj 116 534 t a;
 #X obj 289 704 print;
+#X msg 446 114 M -1 speed 0 \, M -1 resetpos 0 \, L -1 0;
+#X msg 499 139 1 \, 2 \, 3 \, 4 \, 5 \, 6;
+#X msg 499 162 L \$1 0;
 #X connect 0 0 1 0;
 #X connect 0 1 1 1;
 #X connect 0 2 1 2;
@@ -195,14 +201,17 @@
 #X connect 34 0 39 0;
 #X connect 35 0 23 0;
 #X connect 36 0 24 0;
-#X connect 37 0 49 0;
-#X connect 38 0 49 0;
-#X connect 40 0 49 0;
-#X connect 41 0 44 0;
-#X connect 43 0 41 0;
-#X connect 43 1 40 0;
-#X connect 44 0 45 0;
-#X connect 45 0 3 0;
-#X connect 47 0 46 0;
-#X connect 47 1 48 0;
-#X connect 49 0 47 0;
+#X connect 37 0 48 0;
+#X connect 38 0 48 0;
+#X connect 40 0 43 0;
+#X connect 42 0 40 0;
+#X connect 42 1 50 0;
+#X connect 42 1 51 0;
+#X connect 43 0 44 0;
+#X connect 44 0 3 0;
+#X connect 46 0 45 0;
+#X connect 46 1 47 0;
+#X connect 48 0 46 0;
+#X connect 50 0 48 0;
+#X connect 51 0 52 0;
+#X connect 52 0 48 0;

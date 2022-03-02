@@ -1,36 +1,36 @@
-#N canvas 450 70 516 459 10;
+#N canvas 590 130 516 459 10;
 #X declare -path abs;
 #X declare -path maxlib -path moonlib -path ggee -path iemlib -lib
 iemlib -lib zexy -path motex;
-#N canvas 147 235 946 634 guts 0;
+#N canvas 127 215 946 634 guts 0;
 #X obj 112 245 * 1.8;
-#X floatatom 112 267 5 0 0 0 - - - 0;
+#X floatatom 112 267 5 0 0 0 - - -;
 #X text 147 269 tr/mn;
 #X obj 112 291 / 60;
 #X obj 112 312 * 400;
-#X floatatom 112 334 5 0 0 0 - - - 0;
+#X floatatom 112 334 5 0 0 0 - - -;
 #X text 147 333 step/s;
 #X obj 145 142 nbx 5 14 -1e+37 1e+37 0 0 \$0-Frame-snd \$0-Frame-rcv
-Frame 0 -8 0 10 #fc8000 #000000 #000000 0 256;
+Frame 0 -8 0 10 -260097 -1 -1 0 256;
 #X obj 143 177 nbx 5 14 0 255 0 0 \$0-Speed-snd \$0-Speed-rcv Speed
-0 -8 0 10 #c4fcc4 #000000 #000000 0 256;
+0 -8 0 10 -204786 -1 -1 60 256;
 #X obj 144 215 nbx 5 14 1 255 0 0 \$0-Light-snd \$0-Light-rcv Light
-0 -8 0 10 #f8fc00 #000000 #000000 0 256;
+0 -8 0 10 -257985 -1 -1 1 256;
 #N canvas 709 81 731 514 tests 0;
-#X floatatom 158 215 0 0 0 0 - - - 0;
-#X floatatom 191 116 5 0 0 0 - - - 0;
-#X obj 74 81 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
-0 1;
-#X obj 78 27 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
-0 1;
+#X floatatom 158 215 0 0 0 0 - - -;
+#X floatatom 191 116 5 0 0 0 - - -;
+#X obj 74 81 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 78 27 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
 #X msg 202 84 0;
 #X obj 158 196 * 400;
 #X obj 288 103 timer;
 #X obj 315 80 b;
 #X obj 280 82 b;
-#X floatatom 292 133 0 0 0 0 - - - 0;
-#X obj 286 50 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X floatatom 292 133 0 0 0 0 - - -;
+#X obj 286 50 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X obj 74 52 metro 2000;
 #X obj 121 79 random 5;
 #X msg 168 35 1000;
@@ -42,40 +42,40 @@ Frame 0 -8 0 10 #fc8000 #000000 #000000 0 256;
 #X obj 158 277 speedlim 200;
 #X obj 160 171 * 2;
 #X text 242 204 courant max;
-#X floatatom 258 227 5 0 255 0 - - - 0;
-#X floatatom 354 224 5 0 100 0 - - - 0;
+#X floatatom 258 227 5 0 255 0 - - -;
+#X floatatom 354 224 5 0 100 0 - - -;
 #X text 337 200 vitesse max;
 #X msg 354 245 speed \$1;
 #X msg 258 248 current \$1;
 #X msg 215 158 1;
 #X obj 428 90 tgl 30 0 \$0-SequenceOn-snd \$0-SequenceOn-rcv SequenceOn
--10 -12 0 12 #00fc04 #000000 #000000 0 1;
+-10 -12 0 12 -4034 -1 -1 0 1;
 #X obj 493 181 metro 100;
 #X obj 492 333 s \$0-2StepMotor;
-#X obj 493 140 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 493 140 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X obj 493 264 + 1;
 #X obj 559 236 random 30;
 #X obj 493 210 t b b;
-#X obj 573 124 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 573 124 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X obj 493 284 pack f f;
 #X obj 559 258 + 85;
 #X msg 597 166 200;
-#X floatatom 607 270 5 0 0 0 - - - 0;
+#X floatatom 607 270 5 0 0 0 - - -;
 #X msg 595 200 100;
 #X msg 494 306 \$1 speed \$2 \, \$1 inc 1;
 #X msg 631 78 250;
 #X msg 611 130 400;
 #X msg 635 154 300;
 #X msg 641 182 166;
-#X floatatom 637 230 5 0 0 0 - - - 0;
+#X floatatom 637 230 5 0 0 0 - - -;
 #X msg 535 93 40;
 #X msg 380 306 1;
 #X msg 410 306 -1;
 #X obj 234 388 r \$0-StepMotor;
 #X obj 234 446 route simulframe;
-#X floatatom 242 488 5 0 0 0 - - - 0;
+#X floatatom 242 488 5 0 0 0 - - -;
 #X msg 412 426 100;
 #X msg 374 426 95;
 #X msg 444 426 105;
@@ -155,18 +155,18 @@ Frame 0 -8 0 10 #fc8000 #000000 #000000 0 256;
 #X connect 66 0 30 0;
 #X connect 67 0 32 0;
 #X restore 824 61 pd tests;
-#X obj 207 76 hradio 15 1 0 11 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 0;
-#X obj 831 324 tgl 30 0 \$0-Calage empty Calage -10 -12 0 12 #fcfcfc
-#000000 #000000 0 1;
+#X obj 207 76 hradio 15 1 0 11 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 831 324 tgl 30 0 \$0-Calage empty Calage -10 -12 0 12 -262144
+-1 -1 0 1;
 #X obj 211 238 hradio 15 1 0 8 \$0-Mode-snd \$0-Mode-rcv Mode 0 -8
-0 12 #fcfcfc #000000 #000000 0;
+0 12 -262144 -1 -1 0;
 #X obj 126 89 del 1000;
 #X msg 130 110 60;
 #X obj 74 21 loadbang;
 #X obj 33 46 del 5000;
 #X obj 354 154 vsl 15 128 0 1 0 1 \$0-LumMaster-snd \$0-LumMaster-rcv
-LumMaster 0 -9 1 10 #f8fc00 #000000 #000000 12700 1;
+LumMaster 0 -9 1 10 -257985 -1 -1 12700 1;
 #X msg 36 77 \; pd dsp 1;
 #N canvas 1 81 508 451 Lampes 0;
 #X obj 74 49 dispatch \$0-lampe 1 6;
@@ -188,14 +188,14 @@ LumMaster 0 -9 1 10 #f8fc00 #000000 #000000 12700 1;
 #X msg 270 149 1 \$1 \, 2 \$1 \, 3 \$1 \, 4 \$1 \, 5 \$1 \, 6 \$1;
 #X obj 260 249 r \$0-LumMaster-snd;
 #X obj 260 270 * 255;
-#X floatatom 259 288 5 0 0 0 - - - 0;
+#X floatatom 259 288 5 0 0 0 - - -;
 #X obj 290 23 r \$0-lampeall-snd;
 #X obj 290 68 s \$0-lampe-rcv;
 #X msg 289 43 -1 \$1;
-#X floatatom 224 330 5 0 0 0 - - - 0;
+#X floatatom 224 330 5 0 0 0 - - -;
 #X obj 238 363 / 255;
 #X obj 240 383 * 100;
-#X floatatom 245 410 5 0 0 0 - - - 0;
+#X floatatom 245 410 5 0 0 0 - - -;
 #X obj 236 208 r projlampe;
 #X obj 337 363 print;
 #X connect 1 0 2 0;
@@ -225,19 +225,19 @@ LumMaster 0 -9 1 10 #f8fc00 #000000 #000000 12700 1;
 #X connect 27 0 6 0;
 #X restore 29 275 pd Lampes;
 #X obj 364 407 hsl 128 15 0 1 0 0 \$0-lampe1-snd \$0-lampe1-rcv lampe1
-132 6 1 10 #fcfcfc #000000 #000000 0 1;
+132 6 1 10 -262144 -1 -1 0 1;
 #X obj 364 426 hsl 128 15 0 1 0 0 \$0-lampe2-snd \$0-lampe2-rcv lampe2
-132 6 1 10 #fcfcfc #000000 #000000 0 1;
+132 6 1 10 -262144 -1 -1 0 1;
 #X obj 364 445 hsl 128 15 0 1 0 0 \$0-lampe3-snd \$0-lampe3-rcv lampe3
-132 6 1 10 #fcfcfc #000000 #000000 0 1;
+132 6 1 10 -262144 -1 -1 0 1;
 #X obj 364 464 hsl 128 15 0 1 0 0 \$0-lampe4-snd \$0-lampe4-rcv lampe4
-132 6 1 10 #fcfcfc #000000 #000000 0 1;
+132 6 1 10 -262144 -1 -1 0 1;
 #X obj 364 483 hsl 128 15 0 1 0 0 \$0-lampe5-snd \$0-lampe5-rcv lampe5
-132 6 1 10 #fcfcfc #000000 #000000 0 1;
+132 6 1 10 -262144 -1 -1 0 1;
 #X obj 364 502 hsl 128 15 0 1 0 0 \$0-lampe6-snd \$0-lampe6-rcv lampe6
-132 6 1 10 #fcfcfc #000000 #000000 0 1;
+132 6 1 10 -262144 -1 -1 0 1;
 #X obj 361 521 bng 15 250 50 0 \$0-lampesoff-snd \$0-lampesoff-rcv
-lampes-off 17 7 1 10 #fcfcfc #000000 #000000;
+lampes-off 17 7 1 10 -262144 -1 -1;
 #N canvas 325 359 913 610 Calages 0;
 #X obj 26 21 dispatch \$0-calage 1 6;
 #X obj 22 63 r \$0-calage-snd;
@@ -263,11 +263,11 @@ lampes-off 17 7 1 10 #fcfcfc #000000 #000000;
 #X obj 294 132 s \$0-calagef-rcv;
 #X obj 458 227 system;
 #X msg 458 202 xset -display :0 r off;
-#X obj 458 163 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 458 163 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X obj 458 140 loadbang;
-#X obj 21 260 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 21 260 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X obj 21 233 keyon F1;
 #X obj 21 281 sel 1;
 #X msg 644 264 1;
@@ -295,8 +295,8 @@ lampes-off 17 7 1 10 #fcfcfc #000000 #000000;
 #X obj 677 426 s \$0-calagef34-rcv;
 #X obj 724 448 s \$0-calagef56-rcv;
 #X obj 758 399 s \$0-calagefall-rcv;
-#X obj 21 333 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 21 333 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #N canvas 449 470 525 276 waitfor 0;
 #X obj 270 63 inlet;
 #X obj 322 61 inlet;
@@ -304,8 +304,8 @@ lampes-off 17 7 1 10 #fcfcfc #000000 #000000;
 #X msg 457 148 1;
 #X obj 206 217 outlet;
 #X obj 311 175 sel 0 1;
-#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#fcfcfc #fcfcfc 0 1;
+#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-262144 -262144 0 1;
 #X msg 289 212 color 0 0 0;
 #X msg 380 206 color 14 14 14;
 #X obj 372 58 r \$0-stopwait;
@@ -335,13 +335,13 @@ lampes-off 17 7 1 10 #fcfcfc #000000 #000000;
 #X obj 54 374 r \$0-RecalageFini;
 #X obj 21 310 spigot;
 #X obj 65 268 init 1;
-#X obj 65 289 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 65 289 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
 #X obj 173 281 spigot;
 #X msg 17 437 1;
 #X obj 173 305 route F2;
-#X obj 224 282 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 224 282 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X msg 99 296 0;
 #X msg 186 351 0;
 #X obj 173 327 route 1;
@@ -352,11 +352,11 @@ V t T g G b B h H;
 #X obj 96 581 s \$0-lampe-rcv;
 #X msg 156 554 -1 0;
 #X obj 98 496 t b b;
-#X obj 102 475 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 102 475 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X msg 96 554 -1 0.75;
-#X obj 218 382 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 218 382 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X msg 173 261 \$2 \$1;
 #X obj 379 389 sel 1;
 #X msg 217 169 1;
@@ -368,8 +368,8 @@ V t T g G b B h H;
 #X obj 508 436 s \$0-calagef4-rcv;
 #X obj 620 476 s \$0-calagef6-rcv;
 #X obj 574 498 s \$0-calagef5-rcv;
-#X obj 194 444 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 194 444 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X obj 139 421 a2l;
 #X msg 139 442 \$2;
 #X connect 1 0 2 0;
@@ -477,17 +477,17 @@ V t T g G b B h H;
 #X connect 92 0 90 0;
 #X restore 33 298 pd Calages;
 #X obj 335 314 tgl 30 0 \$0-calage1-snd \$0-calage1-rcv 1 10 15 1 20
-#f8fc00 #000000 #000000 0 1;
+-257985 -1 -1 0 1;
 #X obj 369 314 tgl 30 0 \$0-calage2-snd \$0-calage2-rcv 2 10 15 1 20
-#f8fc00 #000000 #000000 0 1;
+-257985 -1 -1 0 1;
 #X obj 403 314 tgl 30 0 \$0-calage3-snd \$0-calage3-rcv 3 10 15 1 20
-#f8fc00 #000000 #000000 0 1;
+-257985 -1 -1 0 1;
 #X obj 437 314 tgl 30 0 \$0-calage4-snd \$0-calage4-rcv 4 10 15 1 20
-#f8fc00 #000000 #000000 0 1;
+-257985 -1 -1 0 1;
 #X obj 471 314 tgl 30 0 \$0-calage5-snd \$0-calage5-rcv 5 10 15 1 20
-#f8fc00 #000000 #000000 0 1;
+-257985 -1 -1 0 1;
 #X obj 505 314 tgl 30 0 \$0-calage6-snd \$0-calage6-rcv 6 10 15 1 20
-#f8fc00 #000000 #000000 0 1;
+-257985 -1 -1 0 1;
 #X text 398 297 calages;
 #X msg 219 179 -1 speed \$1;
 #X obj 219 201 s \$0-2StepMotor;
@@ -499,35 +499,35 @@ V t T g G b B h H;
 #X obj 830 218 l StepMotor \$0 5 33;
 #X obj 830 238 l StepMotor \$0 6 41;
 #N canvas 1002 184 719 305 Move 0;
-#X floatatom 29 32 5 0 0 0 - - - 0;
+#X floatatom 29 32 5 0 0 0 - - -;
 #X obj 27 99 s \$0-2StepMotor;
 #X obj 28 51 pack f f;
-#X obj 121 36 hradio 15 1 0 6 empty empty empty 0 -8 0 10 #fcfcfc #000000
-#000000 0;
+#X obj 121 36 hradio 15 1 0 6 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
 #X msg 27 72 \$2 frame \$1;
-#X floatatom 155 95 5 0 0 0 - - - 0;
+#X floatatom 155 95 5 0 0 0 - - -;
 #X obj 364 115 r \$0-StepMotor;
-#X floatatom 357 190 5 0 0 0 - - - 0;
-#X obj 27 -1 hradio 10 1 0 50 empty empty empty 0 -8 0 10 #fcfcfc #000000
-#000000 0;
+#X floatatom 357 190 5 0 0 0 - - -;
+#X obj 27 -1 hradio 10 1 0 50 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
 #X obj 121 54 + 1;
 #X msg 166 58 -1;
 #X msg 530 57 \$1 1;
 #X obj 224 157 s \$0-2StepMotor;
 #X obj 224 111 pack f f;
-#X obj 277 72 hradio 15 1 0 6 empty empty empty 0 -8 0 10 #fcfcfc #000000
-#000000 0;
+#X obj 277 72 hradio 15 1 0 6 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
 #X obj 277 90 + 1;
 #X msg 224 132 \$2 inc \$1;
 #X msg 224 83 1;
-#X floatatom 440 189 5 0 0 0 - - - 0;
+#X floatatom 440 189 5 0 0 0 - - -;
 #X obj 356 166 route simulpos simulframe commandframe;
-#X floatatom 518 193 5 0 0 0 - - - 0;
+#X floatatom 518 193 5 0 0 0 - - -;
 #X msg 297 112 -1;
 #X msg 382 65 -1 resetframe;
 #X msg 382 42 0;
 #X obj 518 216 mod 44;
-#X floatatom 505 256 5 0 0 0 - - - 0;
+#X floatatom 505 256 5 0 0 0 - - -;
 #X obj 562 193 r \$0-loopnbframes;
 #X obj 363 144 route 2;
 #X connect 0 0 2 0;
@@ -558,25 +558,25 @@ V t T g G b B h H;
 #X restore 33 321 pd Move;
 #X obj 830 258 l StepMotor \$0 7 49;
 #X obj 380 231 * 100;
-#X floatatom 380 253 5 0 0 0 - - - 0;
+#X floatatom 380 253 5 0 0 0 - - -;
 #X obj 339 409 vsl 15 128 0 1 0 0 \$0-lampeall-snd \$0-lampeall-rcv
-empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+empty 0 -9 0 10 -262144 -1 -1 0 1;
 #X obj 343 349 bng 15 250 50 0 \$0-calagef1-snd \$0-calagef1-rcv 1
-4 7 0 10 #fcfcfc #000000 #000000;
+4 7 0 10 -262144 -1 -1;
 #X obj 376 348 bng 15 250 50 0 \$0-calagef2-snd \$0-calagef2-rcv 2
-4 7 0 10 #fcfcfc #000000 #000000;
+4 7 0 10 -262144 -1 -1;
 #X obj 413 348 bng 15 250 50 0 \$0-calagef3-snd \$0-calagef3-rcv 3
-4 7 0 10 #fcfcfc #000000 #000000;
+4 7 0 10 -262144 -1 -1;
 #X obj 446 347 bng 15 250 50 0 \$0-calagef4-snd \$0-calagef4-rcv 4
-4 7 0 10 #fcfcfc #000000 #000000;
+4 7 0 10 -262144 -1 -1;
 #X obj 478 347 bng 15 250 50 0 \$0-calagef5-snd \$0-calagef5-rcv 5
-4 7 0 10 #fcfcfc #000000 #000000;
+4 7 0 10 -262144 -1 -1;
 #X obj 511 346 bng 15 250 50 0 \$0-calagef6-snd \$0-calagef6-rcv 6
-4 7 0 10 #fcfcfc #000000 #000000;
+4 7 0 10 -262144 -1 -1;
 #N canvas 873 137 977 719 Scenario 0;
 #X obj 368 336 shuffle 0 43 0.5;
-#X obj 351 334 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 351 334 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X msg 201 73 1e+06;
 #X obj 368 356 s \$0-stopatframe;
 #X obj 201 93 s \$0-stopatframe;
@@ -591,8 +591,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 82 182 s \$0-randomlampe;
 #X obj 118 18 inlet;
 #X obj 122 59 b;
-#X obj 122 40 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 122 40 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X msg 242 78 1 400 0 40 40 0;
 #X msg 220 152 1 400 20 0 1 0;
 #X msg 228 230 1 400 2 4 1 0;
@@ -607,8 +607,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 11 0 1 0;
 #X connect 12 0 5 0;
 #X restore 44 203 pd mode1;
-#X obj 142 24 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 142 24 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X obj 353 46 s \$0-randomspeed;
 #X obj 332 89 s \$0-randomframe;
 #X obj 345 68 s \$0-randomlampe;
@@ -622,8 +622,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 82 182 s \$0-randomlampe;
 #X obj 118 18 inlet;
 #X obj 122 59 b;
-#X obj 122 40 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 122 40 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X msg 228 230 1 400 2 4 1 0;
 #X msg 83 162 1 200 5 40;
 #X msg 242 78 1 200 6 30 60 1;
@@ -638,12 +638,12 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 11 0 0 0;
 #X connect 12 0 1 0;
 #X restore 62 306 pd mode2;
-#X obj 43 307 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 22 202 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 43 406 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 43 307 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 22 202 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 43 406 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #N canvas 439 58 450 300 mode3 0;
 #X obj 242 100 s \$0-randomspeed;
 #X obj 222 174 s \$0-randomframe;
@@ -653,8 +653,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 82 182 s \$0-randomlampe;
 #X obj 118 18 inlet;
 #X obj 122 59 b;
-#X obj 122 40 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 122 40 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X msg 228 230 1 400 2 4 1 0;
 #X msg 242 78 1 200 6 10 50 1;
 #X msg 219 152 1 100 20 0 1 0;
@@ -669,8 +669,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 11 0 1 0;
 #X connect 12 0 5 0;
 #X restore 62 404 pd mode3;
-#X obj 41 506 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 41 506 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #N canvas 439 58 450 300 mode4 0;
 #X obj 242 100 s \$0-randomspeed;
 #X obj 222 174 s \$0-randomframe;
@@ -680,8 +680,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 82 182 s \$0-randomlampe;
 #X obj 118 18 inlet;
 #X obj 122 59 b;
-#X obj 122 40 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 122 40 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X msg 228 230 1 400 2 4 1 0;
 #X msg 219 152 1 100 12 0 1 0;
 #X msg 83 162 1 100 4 60;
@@ -696,8 +696,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 11 0 5 0;
 #X connect 12 0 0 0;
 #X restore 60 504 pd mode4;
-#X obj 35 606 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 35 606 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #N canvas 439 58 450 300 mode5 0;
 #X obj 242 100 s \$0-randomspeed;
 #X obj 222 174 s \$0-randomframe;
@@ -707,8 +707,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 82 182 s \$0-randomlampe;
 #X obj 118 18 inlet;
 #X obj 122 59 b;
-#X obj 122 40 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 122 40 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X msg 228 230 1 400 2 4 1 0;
 #X msg 219 152 1 100 12 0 1 0;
 #X msg 83 162 1 100 4 60;
@@ -723,8 +723,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 11 0 5 0;
 #X connect 12 0 0 0;
 #X restore 55 609 pd mode5;
-#X obj 204 216 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 204 216 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #N canvas 439 58 450 300 mode6 0;
 #X obj 242 100 s \$0-randomspeed;
 #X obj 222 174 s \$0-randomframe;
@@ -734,8 +734,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 82 182 s \$0-randomlampe;
 #X obj 118 18 inlet;
 #X obj 122 59 b;
-#X obj 122 40 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 122 40 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X msg 228 230 1 400 2 4 1 0;
 #X msg 83 162 1 100 4 60;
 #X msg 241 78 1 100 2 30 30 1;
@@ -750,8 +750,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 11 0 0 0;
 #X connect 12 0 1 0;
 #X restore 225 214 pd mode6;
-#X obj 351 310 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 351 310 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #N canvas 71 81 450 300 mode7 0;
 #X obj 242 100 s \$0-randomspeed;
 #X obj 222 174 s \$0-randomframe;
@@ -761,8 +761,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 82 182 s \$0-randomlampe;
 #X obj 118 18 inlet;
 #X obj 122 59 b;
-#X obj 122 40 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 122 40 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X msg 228 230 1 400 2 4 1 0;
 #X msg 83 162 1 100 4 60;
 #X msg 219 152 1 100 6 0 1 -1;
@@ -779,8 +779,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X restore 371 315 pd mode7;
 #X obj 388 28 s \$0-Gyro;
 #X obj 217 27 s \$0-stopwait;
-#X obj 218 9 bng 15 250 50 0 empty empty empty 17 7 0 10 #fc8000 #000000
-#000000;
+#X obj 218 9 bng 15 250 50 0 empty empty empty 17 7 0 10 -260097 -1
+-1;
 #N canvas 299 329 654 276 del 0;
 #X obj 291 141 del;
 #X obj 299 14 inlet;
@@ -791,8 +791,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 299 38 t a a;
 #X obj 291 184 outlet;
 #X obj 418 163 sel 0 1;
-#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#fcfcfc #fcfcfc 0 1;
+#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-262144 -262144 0 1;
 #X msg 396 200 color 0 0 0;
 #X msg 487 194 color 14 14 14;
 #X obj 458 68 r \$0-stopwait;
@@ -833,8 +833,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X msg 457 148 1;
 #X obj 206 217 outlet;
 #X obj 311 175 sel 0 1;
-#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#fcfcfc #fcfcfc 0 1;
+#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-262144 -262144 0 1;
 #X msg 289 212 color 0 0 0;
 #X msg 380 206 color 14 14 14;
 #X obj 372 58 r \$0-stopwait;
@@ -869,8 +869,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 299 38 t a a;
 #X obj 291 184 outlet;
 #X obj 418 163 sel 0 1;
-#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#fcfcfc #fcfcfc 0 1;
+#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-262144 -262144 0 1;
 #X msg 396 200 color 0 0 0;
 #X msg 487 194 color 14 14 14;
 #X obj 458 68 r \$0-stopwait;
@@ -914,8 +914,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 299 38 t a a;
 #X obj 291 184 outlet;
 #X obj 418 163 sel 0 1;
-#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#fcfcfc #fcfcfc 0 1;
+#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-262144 -262144 0 1;
 #X msg 396 200 color 0 0 0;
 #X msg 487 194 color 14 14 14;
 #X obj 458 68 r \$0-stopwait;
@@ -959,8 +959,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 299 38 t a a;
 #X obj 291 184 outlet;
 #X obj 418 163 sel 0 1;
-#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#fcfcfc #fcfcfc 0 1;
+#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-262144 -262144 0 1;
 #X msg 396 200 color 0 0 0;
 #X msg 487 194 color 14 14 14;
 #X obj 458 68 r \$0-stopwait;
@@ -1004,8 +1004,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 299 38 t a a;
 #X obj 291 184 outlet;
 #X obj 418 163 sel 0 1;
-#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#fcfcfc #fcfcfc 0 1;
+#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-262144 -262144 0 1;
 #X msg 396 200 color 0 0 0;
 #X msg 487 194 color 14 14 14;
 #X obj 458 68 r \$0-stopwait;
@@ -1049,8 +1049,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 299 38 t a a;
 #X obj 291 184 outlet;
 #X obj 418 163 sel 0 1;
-#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#fcfcfc #fcfcfc 0 1;
+#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-262144 -262144 0 1;
 #X msg 396 200 color 0 0 0;
 #X msg 487 194 color 14 14 14;
 #X obj 458 68 r \$0-stopwait;
@@ -1094,8 +1094,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 266 67 t a a;
 #X obj 234 246 outlet;
 #X obj 422 164 sel 0 1;
-#X obj 103 115 hsl 80 19 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#fcfcfc #fcfcfc 0 1;
+#X obj 103 115 hsl 80 19 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-262144 -262144 0 1;
 #X msg 422 203 color 0 0 0;
 #X msg 445 184 color 14 14 14;
 #X obj 353 2 r \$0-stopwait;
@@ -1106,12 +1106,12 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 465 33 * 1000;
 #X obj 553 32 * 1000;
 #X obj 505 89 unpack f f;
-#X floatatom 497 113 5 0 0 0 - - - 0;
-#X floatatom 557 133 5 0 0 0 - - - 0;
+#X floatatom 497 113 5 0 0 0 - - -;
+#X floatatom 557 133 5 0 0 0 - - -;
 #X msg 505 68 1;
 #X obj 301 117 unpack f f;
-#X obj 566 166 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 566 166 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X obj 301 159 pack f f;
 #X obj 354 138 * 1000;
 #X msg 381 118 0;
@@ -1156,9 +1156,9 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 30 0 31 0;
 #X coords 0 -1 1 1 85 35 1 100 100;
 #X restore 805 246 pd line;
-#X floatatom 883 288 5 0 0 0 - - - 0;
-#X obj 805 286 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X floatatom 883 288 5 0 0 0 - - -;
+#X obj 805 286 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X msg 805 224 0 \, 1 3;
 #N canvas 51 101 654 276 line 0;
 #X obj 234 203 del;
@@ -1170,8 +1170,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 266 67 t a a;
 #X obj 234 246 outlet;
 #X obj 422 164 sel 0 1;
-#X obj 103 115 hsl 80 19 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#fcfcfc #fcfcfc 0 1;
+#X obj 103 115 hsl 80 19 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-262144 -262144 0 1;
 #X msg 422 203 color 0 0 0;
 #X msg 445 184 color 14 14 14;
 #X obj 353 2 r \$0-stopwait;
@@ -1180,12 +1180,12 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 234 95 route stop;
 #X msg 234 115 stop;
 #X obj 505 89 unpack f f;
-#X floatatom 497 113 5 0 0 0 - - - 0;
-#X floatatom 557 133 5 0 0 0 - - - 0;
+#X floatatom 497 113 5 0 0 0 - - -;
+#X floatatom 557 133 5 0 0 0 - - -;
 #X msg 505 68 1;
 #X obj 301 117 unpack f f;
-#X obj 566 166 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 566 166 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X obj 301 159 pack f f;
 #X obj 354 138 * 1000;
 #X msg 381 118 0;
@@ -1230,9 +1230,9 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 28 0 29 0;
 #X coords 0 -1 1 1 85 35 1 100 100;
 #X restore 178 653 pd line;
-#X floatatom 839 289 5 0 0 0 - - - 0;
-#X obj 492 133 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X floatatom 839 289 5 0 0 0 - - -;
+#X obj 492 133 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X msg 178 629 0 \, 1 \$1;
 #N canvas 542 26 450 300 mode8_immo 0;
 #X obj 246 84 s \$0-randomspeed;
@@ -1242,8 +1242,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X text 244 100 on period air range min all;
 #X obj 246 125 s \$0-randomlampe;
 #X obj 118 18 inlet;
-#X obj 122 40 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 122 40 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X msg 154 80 0;
 #X obj 122 59 t b b;
 #X msg 67 220 1e+06;
@@ -1265,16 +1265,16 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 527 76 s \$0-immolum;
 #X msg 567 30 0.8;
 #X obj 567 51 s \$0-coulelum;
-#X obj 495 24 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 495 24 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X obj 478 94 s \$0-flashlum;
 #X msg 478 73 0.9;
 #X obj 256 380 r \$0-TousArrives;
-#X obj 237 382 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 237 382 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X obj 256 403 sel 1;
-#X obj 344 138 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 344 138 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #N canvas 51 101 654 276 line 0;
 #X obj 234 203 del;
 #X obj 266 9 inlet;
@@ -1285,8 +1285,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 266 67 t a a;
 #X obj 234 246 outlet;
 #X obj 422 164 sel 0 1;
-#X obj 103 115 hsl 80 19 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#fcfcfc #fcfcfc 0 1;
+#X obj 103 115 hsl 80 19 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-262144 -262144 0 1;
 #X msg 422 203 color 0 0 0;
 #X msg 445 184 color 14 14 14;
 #X obj 353 2 r \$0-stopwait;
@@ -1295,12 +1295,12 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 234 95 route stop;
 #X msg 234 115 stop;
 #X obj 505 89 unpack f f;
-#X floatatom 497 113 5 0 0 0 - - - 0;
-#X floatatom 557 133 5 0 0 0 - - - 0;
+#X floatatom 497 113 5 0 0 0 - - -;
+#X floatatom 557 133 5 0 0 0 - - -;
 #X msg 505 68 1;
 #X obj 301 117 unpack f f;
-#X obj 566 166 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 566 166 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X obj 301 159 pack f f;
 #X obj 354 138 * 1000;
 #X msg 381 118 0;
@@ -1350,8 +1350,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 279 636 s \$0-lampe-rcv;
 #X msg 279 617 -1 \$1;
 #X msg 336 617 0;
-#X obj 149 450 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 149 450 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X msg 410 186 0 \, 1 \$1;
 #X obj 559 123 random 10;
 #X obj 509 227 s \$0-2StepMotor;
@@ -1371,9 +1371,9 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X restore 509 166 pd cos;
 #X msg 509 205 -1 speed \$1;
 #X obj 378 275 s \$0-2StepMotor;
-#X obj 287 527 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X floatatom 558 187 5 0 0 0 - - - 0;
+#X obj 287 527 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 558 187 5 0 0 0 - - -;
 #X obj 418 658 s \$0-2StepMotor;
 #X msg 418 617 0;
 #X msg 418 637 -1 resetframe \$1;
@@ -1398,8 +1398,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 299 38 t a a;
 #X obj 291 184 outlet;
 #X obj 418 163 sel 0 1;
-#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#fcfcfc #fcfcfc 0 1;
+#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-262144 -262144 0 1;
 #X msg 396 200 color 0 0 0;
 #X msg 487 194 color 14 14 14;
 #X obj 458 68 r \$0-stopwait;
@@ -1433,29 +1433,29 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 18 0 0 1;
 #X coords 0 -1 1 1 85 35 1 100 100;
 #X restore 178 481 pd del;
-#X obj 270 163 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X obj 298 265 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 270 163 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 298 265 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X obj 378 125 t b b;
 #X obj 489 477 s \$0-Gyro;
 #X obj 471 500 s \$0-SonAlarme;
-#X obj 507 422 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 361 451 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 507 422 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 361 451 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X obj 361 487 s \$0-lampe-rcv;
 #X msg 361 468 -1 \$1;
 #X obj 362 429 metro 200;
-#X obj 389 397 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 389 397 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X obj 418 443 sel 0;
 #X msg 422 467 0;
 #X msg 282 463 1;
 #X msg 275 492 0;
 #X obj 317 503 r \$0-stopwait;
-#X obj 154 114 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 154 114 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #N canvas 299 329 654 276 del 0;
 #X obj 291 141 del;
 #X obj 299 14 inlet;
@@ -1466,8 +1466,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 299 38 t a a;
 #X obj 291 184 outlet;
 #X obj 418 163 sel 0 1;
-#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#fcfcfc #fcfcfc 0 1;
+#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-262144 -262144 0 1;
 #X msg 396 200 color 0 0 0;
 #X msg 487 194 color 14 14 14;
 #X obj 458 68 r \$0-stopwait;
@@ -1513,8 +1513,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 82 182 s \$0-randomlampe;
 #X obj 118 18 inlet;
 #X obj 122 59 b;
-#X obj 122 40 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 122 40 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X msg 228 230 1 400 2 4 1 0;
 #X msg 83 162 1 200 5 40;
 #X msg 242 78 1 200 6 30 60 1;
@@ -1540,8 +1540,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 299 38 t a a;
 #X obj 291 184 outlet;
 #X obj 418 163 sel 0 1;
-#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#fcfcfc #fcfcfc 0 1;
+#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-262144 -262144 0 1;
 #X msg 396 200 color 0 0 0;
 #X msg 487 194 color 14 14 14;
 #X obj 458 68 r \$0-stopwait;
@@ -1575,16 +1575,16 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 18 0 0 1;
 #X coords 0 -1 1 1 85 35 1 100 100;
 #X restore 586 403 pd del;
-#X obj 666 308 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 666 308 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X obj 586 383 + 10;
 #X obj 691 420 s \$0-2StepMotor;
 #X msg 691 399 \$1 inc 1;
 #X obj 586 442 t b b;
 #X obj 765 538 sel 0;
 #X obj 708 468 b;
-#X obj 547 340 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 547 340 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #N canvas 299 329 654 276 del 0;
 #X obj 291 141 del;
 #X obj 299 14 inlet;
@@ -1595,8 +1595,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 299 38 t a a;
 #X obj 291 184 outlet;
 #X obj 418 163 sel 0 1;
-#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#fcfcfc #fcfcfc 0 1;
+#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-262144 -262144 0 1;
 #X msg 396 200 color 0 0 0;
 #X msg 487 194 color 14 14 14;
 #X obj 458 68 r \$0-stopwait;
@@ -1644,8 +1644,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 299 38 t a a;
 #X obj 291 184 outlet;
 #X obj 418 163 sel 0 1;
-#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#fcfcfc #fcfcfc 0 1;
+#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-262144 -262144 0 1;
 #X msg 396 200 color 0 0 0;
 #X msg 487 194 color 14 14 14;
 #X obj 458 68 r \$0-stopwait;
@@ -1692,12 +1692,12 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 605 517 +;
 #X obj 659 572 t b b;
 #X msg 713 526 0;
-#X obj 599 474 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 599 474 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X obj 605 572 t b;
-#X obj 609 597 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X floatatom 559 555 5 0 0 0 - - - 0;
+#X obj 609 597 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 559 555 5 0 0 0 - - -;
 #X obj 605 494 random 4;
 #X obj 605 551 moses 10;
 #X obj 267 7 loadbang;
@@ -1714,8 +1714,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 299 38 t a a;
 #X obj 291 184 outlet;
 #X obj 418 163 sel 0 1;
-#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#fcfcfc #fcfcfc 0 1;
+#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-262144 -262144 0 1;
 #X msg 396 200 color 0 0 0;
 #X msg 487 194 color 14 14 14;
 #X obj 458 68 r \$0-stopwait;
@@ -1760,8 +1760,8 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 299 38 t a a;
 #X obj 291 184 outlet;
 #X obj 418 163 sel 0 1;
-#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#fcfcfc #fcfcfc 0 1;
+#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-262144 -262144 0 1;
 #X msg 396 200 color 0 0 0;
 #X msg 487 194 color 14 14 14;
 #X obj 458 68 r \$0-stopwait;
@@ -1952,13 +1952,13 @@ empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 152 0 60 0;
 #X restore 186 493 pd Scenario;
 #X obj 430 366 bng 15 250 50 0 \$0-calagef34-snd \$0-calagef34rcv 34
-2 7 0 10 #fcfcfc #000000 #000000;
+2 7 0 10 -262144 -1 -1;
 #X obj 362 366 bng 15 250 50 0 \$0-calagef12-snd \$0-calagef12-rcv
-12 2 7 0 10 #fcfcfc #000000 #000000;
+12 2 7 0 10 -262144 -1 -1;
 #X obj 492 367 bng 15 250 50 0 \$0-calagef56-snd \$0-calagef56-rcv
-56 2 7 0 10 #fcfcfc #000000 #000000;
+56 2 7 0 10 -262144 -1 -1;
 #X obj 430 383 bng 15 250 50 0 \$0-calagefall-snd \$0-calagefall-rcv
-all 1 7 0 10 #fcfcfc #000000 #000000;
+all 1 7 0 10 -262144 -1 -1;
 #X msg 215 106 80;
 #X msg 247 106 0;
 #X msg 310 176 0;
@@ -1980,11 +1980,11 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X obj 43 203 + 1;
 #X obj 72 204 moses 5;
 #X msg 132 203 0;
-#X obj 117 236 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X floatatom 13 226 5 0 0 0 - - - 0;
-#X obj 134 46 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 117 236 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 13 226 5 0 0 0 - - -;
+#X obj 134 46 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X msg 139 108 0 \, 1;
 #X obj 140 132 showtab \$0-KeyStop;
 #X obj 126 18 init 1;
@@ -1998,8 +1998,8 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X msg 457 148 1;
 #X obj 206 217 outlet;
 #X obj 311 175 sel 0 1;
-#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#fcfcfc #fcfcfc 0 1;
+#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-262144 -262144 0 1;
 #X msg 289 212 color 0 0 0;
 #X msg 380 206 color 14 14 14;
 #X obj 372 58 r \$0-stopwait;
@@ -2055,7 +2055,7 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X connect 25 0 21 1;
 #X restore 16 251 pd guts;
 #X obj 18 94 bng 80 250 50 0 \$0-stopbut-snd \$0-stopbut-rcv STOP 0
--12 1 30 #fc0400 #000000 #000000;
+-12 1 30 -258113 -1 -1;
 #X text 104 93 Pour arreter \, appuyer 5 fois sur;
 #X text 104 109 ce bouton ou sur la touche "F5";
 #X obj 15 271 namecanvas \$0-stopcan;
@@ -2072,15 +2072,15 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X msg 385 106 0;
 #X obj 353 59 t b b;
 #X obj 374 218 s \$0-lampesoff-rcv;
-#X obj 374 199 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 374 199 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X obj 190 68 s \$0-Stop;
 #X obj 392 267 shuffle 0 43 0.5;
-#X obj 375 265 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 375 265 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X obj 146 204 s \$0-stopatframe;
-#X obj 374 248 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 374 248 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #N canvas 71 81 450 300 mode7 0;
 #X obj 242 100 s \$0-randomspeed;
 #X obj 222 174 s \$0-randomframe;
@@ -2090,8 +2090,8 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X obj 82 182 s \$0-randomlampe;
 #X obj 118 18 inlet;
 #X obj 122 59 b;
-#X obj 122 40 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 122 40 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X msg 228 230 1 400 2 4 1 0;
 #X msg 83 162 1 100 4 60;
 #X msg 219 152 1 100 6 0 1 -1;
@@ -2113,8 +2113,8 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X msg 457 148 1;
 #X obj 206 217 outlet;
 #X obj 311 175 sel 0 1;
-#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#fcfcfc #fcfcfc 0 1;
+#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-262144 -262144 0 1;
 #X msg 289 212 color 0 0 0;
 #X msg 380 206 color 14 14 14;
 #X obj 372 58 r \$0-stopwait;
@@ -2149,8 +2149,8 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X obj 299 38 t a a;
 #X obj 291 184 outlet;
 #X obj 418 163 sel 0 1;
-#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#fcfcfc #fcfcfc 0 1;
+#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-262144 -262144 0 1;
 #X msg 396 200 color 0 0 0;
 #X msg 487 194 color 14 14 14;
 #X obj 458 68 r \$0-stopwait;
@@ -2185,8 +2185,8 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X coords 0 -1 1 1 85 35 1 100 100;
 #X restore 126 109 pd del;
 #X obj 204 267 r \$0-TousArrives;
-#X obj 177 288 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 177 288 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X obj 204 290 sel 1;
 #X msg 395 391 0;
 #X msg 395 411 -1 resetframe \$1;
@@ -2200,8 +2200,8 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X obj 299 38 t a a;
 #X obj 291 184 outlet;
 #X obj 418 163 sel 0 1;
-#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#fcfcfc #fcfcfc 0 1;
+#X obj 103 115 hsl 80 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-262144 -262144 0 1;
 #X msg 396 200 color 0 0 0;
 #X msg 487 194 color 14 14 14;
 #X obj 458 68 r \$0-stopwait;
@@ -2242,11 +2242,11 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X obj 126 159 t b b b;
 #X obj 158 486 s \$0-lampe-rcv;
 #X msg 158 466 -1 0;
-#X obj 110 25 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 110 25 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X msg 235 114 -1 0.7;
-#X obj 326 29 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 326 29 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X msg 8 265 -1 speed 70 \, -1 inc 1;
 #X msg 75 225 -1 speed 70 \, -1 inc 0 \, -1 inc 50;
 #X msg 181 182 1e+06;
@@ -2300,9 +2300,9 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X restore 42 398 pd Routines;
 #X obj 146 437 s \$0-scenariostart;
 #X obj 186 473 r \$0-scenariostart;
-#X floatatom 294 103 5 0 0 0 - - - 0;
-#X obj 289 30 hradio 15 1 0 30 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 0;
+#X floatatom 294 103 5 0 0 0 - - -;
+#X obj 289 30 hradio 15 1 0 30 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
 #X obj 451 159 StepMotor \$0 1 33;
 #X obj 451 243 StepMotor \$0 5 9;
 #X obj 451 181 StepMotor \$0 2 25;
@@ -2359,23 +2359,23 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X connect 3 0 4 0;
 #X connect 3 1 5 0;
 #X restore 264 349 pd lock;
-#X obj 278 406 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 0;
+#X obj 278 406 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
 #N canvas 508 108 274 334 randomlampe 0;
 #X obj 27 93 metro 100;
 #X obj 26 174 t f b;
 #X obj 26 249 pack f f;
 #X obj 28 275 s \$0-lampe-rcv;
-#X obj 27 73 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
-0 1;
+#X obj 27 73 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
 #X msg 87 73 300;
 #X msg 136 263 \$1 1;
 #X msg 139 221 1 2 3 4 5 6;
 #X obj 141 240 drip;
 #X obj 27 27 r \$0-randomlampe;
 #X msg 159 285 -1 \$1;
-#X obj 180 245 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 180 245 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #N canvas 1 108 255 271 rnd-find-unlock 0;
 #X obj 92 36 inlet;
 #X obj 92 123 random 7;
@@ -2400,14 +2400,14 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X connect 3 1 5 0;
 #X restore 92 191 pd lock;
 #X obj 92 211 t f b;
-#X floatatom 40 206 5 0 0 0 - - - 0;
+#X floatatom 40 206 5 0 0 0 - - -;
 #X obj 92 57 t b f;
-#X floatatom 145 33 5 0 0 0 - - - 0;
-#X obj 154 7 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X floatatom 145 33 5 0 0 0 - - -;
+#X obj 154 7 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X obj 92 164 + 1;
-#X obj 69 236 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 69 236 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X obj 92 235 outlet;
 #X obj 145 101 + 6;
 #X connect 0 0 9 0;
@@ -2430,11 +2430,11 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X connect 15 0 1 1;
 #X restore 26 144 pd rnd-find-unlock;
 #X obj 27 117 f;
-#X floatatom 107 111 5 0 0 0 - - - 0;
+#X floatatom 107 111 5 0 0 0 - - -;
 #X msg 120 73 100;
 #X msg 157 193 -1 \$1;
-#X obj 104 170 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 0 1;
+#X obj 104 170 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
 #X obj 58 200 random 100;
 #X text 28 9 on period air proba;
 #X obj 27 48 unwonk f f f f;
@@ -2466,8 +2466,8 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X restore 30 20 pd randomlampe;
 #N canvas 1 213 349 375 ramdomframe 0;
 #X obj 34 274 pack f f;
-#X obj 34 76 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
-0 1;
+#X obj 34 76 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
 #X obj 34 95 metro 763;
 #X obj 34 325 s \$0-2StepMotor;
 #X msg 198 54 4000;
@@ -2497,19 +2497,19 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X connect 3 1 5 0;
 #X restore 92 191 pd lock;
 #X obj 92 211 t f b;
-#X floatatom 172 216 5 0 0 0 - - - 0;
+#X floatatom 172 216 5 0 0 0 - - -;
 #X obj 92 57 t b f;
-#X floatatom 145 33 5 0 0 0 - - - 0;
-#X obj 154 7 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X floatatom 145 33 5 0 0 0 - - -;
+#X obj 154 7 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X obj 92 164 + 1;
-#X obj 69 236 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 69 236 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X obj 92 235 outlet;
 #X obj 145 101 + 6;
-#X floatatom 30 116 5 0 0 0 - - - 0;
-#X obj 43 80 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X floatatom 30 116 5 0 0 0 - - -;
+#X obj 43 80 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X connect 0 0 9 0;
 #X connect 1 0 4 0;
 #X connect 1 0 16 0;
@@ -2533,8 +2533,8 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X obj 34 32 r \$0-randomframe;
 #X msg 238 84 100;
 #X msg 63 144 -1;
-#X obj 152 118 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 152 118 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X obj 110 250 random 5;
 #X obj 110 272 + 0;
 #X text 33 17 on period air range min all;
@@ -2589,8 +2589,8 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #N canvas 512 81 411 451 randomspeed 0;
 #X obj 32 240 t f b;
 #X obj 32 282 pack f f;
-#X obj 22 75 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
-0 1;
+#X obj 22 75 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
 #X obj 23 101 metro 763;
 #X obj 40 339 s \$0-2StepMotor;
 #X msg 146 94 4000;
@@ -2600,12 +2600,12 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X msg 163 70 200;
 #X obj 250 186 sel 0;
 #X msg 236 294 -1 speed \$1;
-#X obj 330 184 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 330 184 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X obj 23 124 demux 0 1;
 #X msg 83 181 -1;
-#X obj 131 73 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 131 73 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X msg 186 94 500;
 #X obj 265 218 random 60;
 #X obj 265 246 + 20;
@@ -2638,18 +2638,18 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X connect 3 1 5 0;
 #X restore 92 191 pd lock;
 #X obj 92 211 t f b;
-#X floatatom 172 216 5 0 0 0 - - - 0;
+#X floatatom 172 216 5 0 0 0 - - -;
 #X obj 92 57 t b f;
-#X floatatom 145 33 5 0 0 0 - - - 0;
-#X obj 154 7 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X floatatom 145 33 5 0 0 0 - - -;
+#X obj 154 7 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X obj 92 164 + 1;
-#X obj 69 236 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 69 236 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X obj 92 235 outlet;
 #X obj 156 87 + 6;
-#X floatatom 194 133 5 0 0 0 - - - 0;
-#X floatatom 51 89 5 0 0 0 - - - 0;
+#X floatatom 194 133 5 0 0 0 - - -;
+#X floatatom 51 89 5 0 0 0 - - -;
 #X connect 0 0 9 0;
 #X connect 0 0 17 0;
 #X connect 1 0 4 0;
@@ -2672,13 +2672,13 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X restore 27 202 pd rnd-find-unlock;
 #X obj 27 180 f;
 #X obj 22 50 unwonk f f f f f;
-#X floatatom 238 114 5 0 0 0 - - - 0;
+#X floatatom 238 114 5 0 0 0 - - -;
 #X msg 200 43;
 #X msg 201 194 20 10;
 #X msg 170 269 75 2;
 #X text 18 10 on period air range min all;
-#X floatatom 128 269 5 0 0 0 - - - 0;
-#X floatatom 98 285 5 0 0 0 - - - 0;
+#X floatatom 128 269 5 0 0 0 - - -;
+#X floatatom 98 285 5 0 0 0 - - -;
 #X obj 83 143 random 7;
 #X obj 83 162 sel 0;
 #X connect 0 0 1 0;
@@ -2736,14 +2736,14 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X msg 371 188 0;
 #X msg 523 216 1 400 0 10 6 1 \, 0;
 #X msg 398 216 1 400 0 30 10 0;
-#X obj 526 375 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 0;
+#X obj 526 375 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
 #X msg 414 167 1 50 4 50 10 1;
 #X msg 445 188 1 50 10 80 10 0;
 #X msg 83 300 0;
 #X msg 114 300 20;
 #X obj 73 344 s \$0-stopatframe;
-#X floatatom 73 327 5 0 0 0 - - - 0;
+#X floatatom 73 327 5 0 0 0 - - -;
 #X msg 33 407 -1 maxframe \$1;
 #X obj 34 429 s \$0-2StepMotor;
 #X obj 33 385 r \$0-stopatframe;
@@ -2797,7 +2797,7 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X connect 47 0 10 0;
 #X connect 48 0 11 0;
 #X restore 195 312 pd Randomiseurs;
-#X floatatom 161 293 5 0 0 0 - - - 0;
+#X floatatom 161 293 5 0 0 0 - - -;
 #X text 198 292 im/sec;
 #X msg 651 521 44;
 #X obj 39 564 declare -path abs;
@@ -2817,15 +2817,15 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X obj 139 28 r DMXdriverOK;
 #X obj 139 51 sel 1;
 #X obj 561 319 hsl 128 15 0 1 0 0 Treuil1 Treuil1 Treuil1 -2 -8 0 10
-#fcfcc4 #000000 #000000 0 1;
+-262130 -1 -1 0 1;
 #X obj 562 352 hsl 128 15 0 1 0 0 Treuil2 Treuil2 Treuil2 -2 -8 0 10
-#fcfcc4 #000000 #000000 0 1;
+-262130 -1 -1 0 1;
 #X obj 702 319 tgl 15 0 treuilzero1 treuilzero1 treuilzero1 0 -7 0
-10 #fcfcc4 #000000 #000000 0 1;
+10 -262130 -1 -1 0 1;
 #X obj 702 353 tgl 15 0 treuilzero2 treuilzero2 treuilzero2 0 -7 0
-10 #fcfcc4 #000000 #000000 0 1;
-#X obj 615 159 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+10 -262130 -1 -1 0 1;
+#X obj 615 159 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X obj 631 194 metro 1500;
 #X obj 415 92 s \$0-2StepMotor;
 #X obj 415 70 r 2StepMotor;
@@ -2855,8 +2855,8 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X obj 135 131 mod 44;
 #X obj 202 131 r \$0-loopnbframes;
 #X obj 270 77 tabread \$0-commandframes 10;
-#X floatatom 276 57 5 0 0 0 - - - 0;
-#X floatatom 272 108 5 0 0 0 - - - 0;
+#X floatatom 276 57 5 0 0 0 - - -;
+#X floatatom 272 108 5 0 0 0 - - -;
 #X obj 101 250 pack f f;
 #X msg 101 270 \$1 \$2;
 #X obj 170 257 r \$0-immolum;
@@ -2875,33 +2875,33 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X msg 674 359 1;
 #X obj 606 384 f;
 #X obj 606 410 s \$0-TousArrives;
-#X obj 680 394 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 576 158 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 680 394 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 576 158 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X obj 532 267 print;
-#X floatatom 733 314 5 0 0 0 - - - 0;
+#X floatatom 733 314 5 0 0 0 - - -;
 #X obj 629 237 drip;
 #X obj 629 276 mod 44;
-#X floatatom 800 200 5 0 0 0 - - - 0;
-#X floatatom 780 214 5 0 0 0 - - - 0;
-#X floatatom 721 220 5 0 0 0 - - - 0;
-#X floatatom 762 231 5 0 0 0 - - - 0;
-#X floatatom 684 221 5 0 0 0 - - - 0;
-#X floatatom 674 237 5 0 0 0 - - - 0;
+#X floatatom 800 200 5 0 0 0 - - -;
+#X floatatom 780 214 5 0 0 0 - - -;
+#X floatatom 721 220 5 0 0 0 - - -;
+#X floatatom 762 231 5 0 0 0 - - -;
+#X floatatom 684 221 5 0 0 0 - - -;
+#X floatatom 674 237 5 0 0 0 - - -;
 #X obj 661 69 mod 44;
-#X floatatom 664 88 5 0 0 0 - - - 0;
+#X floatatom 664 88 5 0 0 0 - - -;
 #X obj 725 30 unpack f f f f f f;
 #X obj 703 70 mod 44;
-#X floatatom 706 89 5 0 0 0 - - - 0;
+#X floatatom 706 89 5 0 0 0 - - -;
 #X obj 748 71 mod 44;
-#X floatatom 751 90 5 0 0 0 - - - 0;
+#X floatatom 751 90 5 0 0 0 - - -;
 #X obj 795 71 mod 44;
-#X floatatom 798 90 5 0 0 0 - - - 0;
+#X floatatom 798 90 5 0 0 0 - - -;
 #X obj 837 72 mod 44;
-#X floatatom 840 91 5 0 0 0 - - - 0;
+#X floatatom 840 91 5 0 0 0 - - -;
 #X obj 882 73 mod 44;
-#X floatatom 885 92 5 0 0 0 - - - 0;
+#X floatatom 885 92 5 0 0 0 - - -;
 #X obj 685 312 t b f;
 #X obj 699 334 del 1;
 #X obj 208 27 table projs-commandframe 10;
@@ -2981,13 +2981,13 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X restore 32 342 pd State;
 #N canvas 1 194 774 417 calc_notes 0;
 #X obj 206 125 mtof;
-#X floatatom 207 98 5 0 0 0 - - - 0;
-#X floatatom 250 309 5 0 0 0 - - - 0;
+#X floatatom 207 98 5 0 0 0 - - -;
+#X floatatom 250 309 5 0 0 0 - - -;
 #X obj 206 149 / 8.175;
 #X obj 326 256 phasor~;
 #X obj 326 209 *;
 #X obj 340 188 t b f;
-#X floatatom 345 165 5 0 0 0 - - - 0;
+#X floatatom 345 165 5 0 0 0 - - -;
 #X obj 326 277 dac~;
 #X msg 371 37 0 0 0 2 0 4 5;
 #X obj 446 108 i;
@@ -2998,9 +2998,9 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X msg 473 214 2;
 #X msg 503 214 4;
 #X msg 532 215 5;
-#X obj 466 48 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X floatatom 248 172 5 0 0 0 - - - 0;
+#X obj 466 48 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 248 172 5 0 0 0 - - -;
 #X obj 206 170 * 32;
 #X obj 615 87 metro 250;
 #X obj 615 108 i;
@@ -3111,7 +3111,7 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X connect 107 0 106 0;
 #X restore 81 357 pd guts;
 #X obj 226 78 bng 15 250 50 0 conduite-RESET empty RESET 17 7 0 10
-#fcfcfc #000000 #000000;
+-262144 -1 -1;
 #X obj 27 57 seq/main conduite;
 #X obj 208 131 seq/proj conduite 1;
 #X obj 208 165 seq/proj conduite 2;
@@ -3121,10 +3121,10 @@ all 1 7 0 10 #fcfcfc #000000 #000000;
 #X obj 208 298 seq/proj conduite 6;
 #X obj 294 16 seq/metro conduite 1;
 #X obj 81 335 bng 15 250 50 0 empty empty resetPositions 17 7 0 10
-#fcfcfc #000000 #000000;
+-262144 -1 -1;
 #X obj 294 50 seq/metro conduite 2;
 #X obj 294 83 seq/metro conduite 3;
-#N canvas 102 81 1029 411 tests 0;
+#N canvas 118 414 1029 411 tests 0;
 #X obj 229 306 outlet load;
 #X msg 227 237 symbol conduite-test;
 #X obj 72 146 s seq-conduite-line;
@@ -3154,10 +3154,10 @@ speed(Hz) val_min val_max;
 #X msg 588 291 \$1;
 #X msg 588 348 -1 frame \$1;
 #X msg 526 259 5;
-#X floatatom 588 317 5 0 0 0 - - - 0;
+#X floatatom 588 317 5 0 0 0 - - -;
 #X msg 691 315 -1 speed \$1;
 #X msg 731 275 20;
-#X floatatom 731 296 5 0 0 0 - - - 0;
+#X floatatom 731 296 5 0 0 0 - - -;
 #X msg 836 244 387;
 #X connect 1 0 0 0;
 #X connect 3 0 2 0;
@@ -3187,7 +3187,7 @@ speed(Hz) val_min val_max;
 #X connect 28 0 26 0;
 #X connect 29 0 22 0;
 #X restore 195 24 pd tests;
-#N canvas 339 234 917 374 routines 0;
+#N canvas 685 108 917 374 routines 0;
 #X obj 51 12 r seq-conduite-line;
 #X obj 51 236 list prepend proj1;
 #X obj 51 284 s seq-conduite-line;
@@ -3276,5 +3276,7 @@ var1 100 1 4 \, lampe flash 10 20 100, f 31;
 #X restore 27 28 pd start/stop;
 #X obj 325 381 netMidiCtl \$0;
 #X obj 321 409 LessiveMidi \$0;
+#X obj 322 358 bng 15 250 50 0 refresh-midifiles empty refresh-midifiles
+17 7 0 10 -262144 -1 -1;
 #X connect 10 0 0 0;
 #X connect 13 0 2 4;

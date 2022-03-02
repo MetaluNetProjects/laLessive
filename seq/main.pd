@@ -1,4 +1,4 @@
-#N canvas 296 81 911 662 10;
+#N canvas 286 81 911 662 10;
 #X obj 30 130 text define \$1;
 #X obj 30 72 symbol \$1;
 #X obj 30 44 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -110,6 +110,7 @@
 #X obj 54 397 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 48 474 del 1;
+#X obj 150 43 r \$1-LOAD;
 #X connect 1 0 4 0;
 #X connect 2 0 1 0;
 #X connect 3 0 2 0;
@@ -205,4 +206,5 @@
 #X connect 98 0 96 0;
 #X connect 100 0 74 0;
 #X connect 101 0 96 0;
+#X connect 102 0 4 0;
 #X coords 0 -1 1 1 230 60 1 300 10;

@@ -1,13 +1,13 @@
-#N canvas 896 28 815 938 12;
+#N canvas 896 81 815 938 12;
 #X declare -path Fraise;
 #X obj 22 187 fruit/receive fruit1;
 #X obj 340 254 fruit/send2 fruit1;
 #X obj 10 33 pied/pied 0 41424;
 #X msg 440 150 c 120 c 4 i \$1;
-#X obj 443 126 hsl 128 15 0 1023 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 0 1;
-#X obj 443 188 hsl 128 15 0 1023 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 0 1;
+#X obj 443 126 hsl 128 15 0 1023 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 443 188 hsl 128 15 0 1023 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
 #X msg 440 212 c 121 c 4 i \$1;
 #X msg 412 99 0;
 #X obj 19 9 declare -path Fraise;
@@ -16,26 +16,26 @@
 #X obj 22 434 change -1;
 #X obj 46 340 change -1;
 #X obj 71 269 change -1;
-#X obj 46 389 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 22 478 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 71 293 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 46 389 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 22 478 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 71 293 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X obj 71 313 s startstopButton;
 #X msg 285 142 c 30 i \$1 c \$2;
 #X obj 285 98 r toDMXfraise;
-#X obj 327 403 hsl 128 15 0 255 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 0 1;
+#X obj 327 403 hsl 128 15 0 255 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
 #X obj 324 448 s toDMXfraise;
 #X msg 284 346 85;
 #X msg 324 423 2 \$1;
 #X msg 481 254 EAhQueCoucou;
-#X obj 503 325 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 503 325 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X obj 500 297 metro 500;
-#X obj 468 304 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 468 304 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X obj 503 345 * 85;
 #X msg 507 404 1 \$1 \, 2 \$1 \, 3 \$1 \, 4 \$1 \, 5 \$1;
 #X msg 503 369 1 \$1;
@@ -50,7 +50,7 @@
 #X obj 549 40 r Treuil2;
 #X obj 22 497 s treuilzero1;
 #X obj 46 409 s treuilzero2;
-#X floatatom 146 354 5 0 0 0 - - - 0;
+#X floatatom 146 354 5 0 0 0 - - -;
 #N canvas 1 81 450 300 debounce 0;
 #X obj 96 16 inlet;
 #X obj 96 40 sel 0 1, f 21;
@@ -101,44 +101,44 @@
 #X restore 22 456 pd debounce;
 #X obj 628 38 r Coil;
 #X msg 628 97 C\$1;
-#X obj 628 67 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 628 67 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
 #X obj 599 186 r DMXdriverOK;
 #X obj 599 210 sel 1;
 #X msg 599 234 1;
 #X obj 599 255 s Coil;
-#X obj 234 301 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 0 1;
-#X obj 179 480 hsl 200 30 0 255 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 0 1;
+#X obj 234 301 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 179 480 hsl 200 30 0 255 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
 #X obj 176 515 list prepend 51;
-#X obj 387 478 hradio 30 1 0 6 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 0;
+#X obj 387 478 hradio 30 1 0 6 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
 #X obj 387 513 + 51;
 #X obj 578 476 nbx 5 30 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 18
-#fcfcfc #000000 #000000 0 256;
+-262144 -1 -1 0 256;
 #X obj 175 540 s toDMXfraise;
 #X obj 22 666 fruit/fruit 1 dimmer1 11 dimmerFW 1;
-#X obj 301 611 vsl 15 128 0 1 0 0 empty empty 0 0 -9 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 301 611 vsl 15 128 0 1 0 0 empty empty 0 0 -9 0 10 -262144 -1
+-1 12700 1;
 #X msg 301 747 0 \$1;
 #X obj 317 795 unpack f f;
 #X obj 317 863 pack f f;
 #X obj 374 838 i;
-#X obj 339 611 vsl 15 128 0 1 0 0 empty empty 1 0 -9 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 377 611 vsl 15 128 0 1 0 0 empty empty 2 0 -9 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 415 611 vsl 15 128 0 1 0 0 empty empty 3 0 -9 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 452 612 vsl 15 128 0 1 0 0 empty empty 4 0 -9 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 490 612 vsl 15 128 0 1 0 0 empty empty 5 0 -9 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 528 612 vsl 15 128 0 1 0 0 empty empty 6 0 -9 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 566 612 vsl 15 128 0 1 0 0 empty empty 7 0 -9 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 339 611 vsl 15 128 0 1 0 0 empty empty 1 0 -9 0 10 -262144 -1
+-1 12700 1;
+#X obj 377 611 vsl 15 128 0 1 0 0 empty empty 2 0 -9 0 10 -262144 -1
+-1 12700 1;
+#X obj 415 611 vsl 15 128 0 1 0 0 empty empty 3 0 -9 0 10 -262144 -1
+-1 0 1;
+#X obj 452 612 vsl 15 128 0 1 0 0 empty empty 4 0 -9 0 10 -262144 -1
+-1 0 1;
+#X obj 490 612 vsl 15 128 0 1 0 0 empty empty 5 0 -9 0 10 -262144 -1
+-1 0 1;
+#X obj 528 612 vsl 15 128 0 1 0 0 empty empty 6 0 -9 0 10 -262144 -1
+-1 0 1;
+#X obj 566 612 vsl 15 128 0 1 0 0 empty empty 7 0 -9 0 10 -262144 -1
+-1 0 1;
 #X msg 339 747 1 \$1;
 #X msg 377 747 2 \$1;
 #X msg 415 747 3 \$1;
@@ -153,10 +153,10 @@
 #X obj 617 580 unpack f f, f 20;
 #X obj 682 657 pack f f;
 #X obj 754 605 / 255;
-#X obj 302 565 route 0 1 2 3 4 5 6 7 8, f 40;
 #X obj 617 604 moses 71;
 #X obj 682 604 moses 78;
 #X obj 682 633 - 71;
+#X obj 302 565 route 0 1 2 3 4 5 6, f 40;
 #X connect 0 0 32 0;
 #X connect 3 0 1 0;
 #X connect 4 0 3 0;
@@ -171,9 +171,6 @@
 #X connect 11 0 44 0;
 #X connect 12 0 43 0;
 #X connect 13 0 16 0;
-#X connect 14 0 41 0;
-#X connect 15 0 40 0;
-#X connect 16 0 17 0;
 #X connect 18 0 1 0;
 #X connect 19 0 18 0;
 #X connect 20 0 23 0;
@@ -229,18 +226,16 @@
 #X connect 79 0 81 0;
 #X connect 80 0 64 0;
 #X connect 82 0 83 0;
-#X connect 83 0 87 0;
+#X connect 83 0 86 0;
 #X connect 83 1 85 0;
-#X connect 84 0 86 0;
+#X connect 84 0 89 0;
 #X connect 85 0 84 1;
-#X connect 86 0 60 0;
-#X connect 86 1 65 0;
-#X connect 86 2 66 0;
-#X connect 86 3 67 0;
-#X connect 86 4 68 0;
-#X connect 86 5 69 0;
-#X connect 86 6 70 0;
-#X connect 86 7 71 0;
-#X connect 87 1 88 0;
-#X connect 88 0 89 0;
-#X connect 89 0 84 0;
+#X connect 86 1 87 0;
+#X connect 87 0 88 0;
+#X connect 88 0 84 0;
+#X connect 89 0 60 0;
+#X connect 89 1 65 0;
+#X connect 89 2 66 0;
+#X connect 89 3 68 0;
+#X connect 89 4 69 0;
+#X connect 89 5 70 0;
