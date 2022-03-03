@@ -1,9 +1,9 @@
-#N canvas 992 94 927 662 10;
+#N canvas 982 84 927 662 10;
 #X obj 52 11 r seq-\$1-line;
 #X obj 55 416 hsl 150 10 0 100 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 0 1;
+-1 -1 14900 1;
 #X obj 212 413 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 8 256;
+-262144 -1 -1 103 256;
 #X obj 52 181 r \$0-lampe;
 #X obj 52 458 clip 0 1;
 #X obj 52 479 * 255;
@@ -69,7 +69,7 @@
 #X floatatom 49 248 5 0 0 0 - - -;
 #X obj 191 42 route continu;
 #X obj 419 103 print;
-#X obj 224 104 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 224 104 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 93 67 stop;
 #X obj 428 368 s \$0-stop;
@@ -159,7 +159,7 @@
 #X obj 103 520 + 70;
 #X obj 122 132 print proj\$2-seqline;
 #X obj 705 297 r \$1-STOP;
-#N canvas 564 189 665 725 diapo 0;
+#N canvas 554 179 665 725 diapo 1;
 #X obj 44 20 inlet;
 #X obj 329 11 r \$0-mode;
 #X obj 44 185 f;
@@ -185,7 +185,7 @@
 #X obj 44 84 unpack f f f f f;
 #X msg 354 250 -1;
 #X obj 329 32 route diapo;
-#X obj 377 91 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 377 91 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 250 194 unpack f f;
 #X obj 205 285 +, f 11;
@@ -216,6 +216,7 @@
 #X msg 244 481 inc \$1;
 #X floatatom 225 589 5 0 0 0 - - -;
 #X floatatom 194 519 5 0 0 0 - - -;
+#X floatatom 182 88 5 0 0 0 - - -;
 #X connect 0 0 49 0;
 #X connect 1 0 24 0;
 #X connect 2 0 18 0;
@@ -280,9 +281,9 @@
 #X connect 49 0 51 0;
 #X connect 49 1 16 0;
 #X connect 49 2 50 1;
+#X connect 49 2 55 0;
 #X connect 50 0 52 0;
 #X connect 50 0 54 0;
-#X connect 51 0 50 1;
 #X connect 52 0 10 0;
 #X restore 427 529 pd diapo;
 #X msg 67 642 diapo 80 20 0 50 0;
