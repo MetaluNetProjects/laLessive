@@ -1,0 +1,77 @@
+#N canvas 710 536 800 344 10;
+#X obj 33 154 hsl 153 18 0 1023 0 0 empty empty empty -2 -9 0 10 -262144
+-1 -1 0 1;
+#X msg 42 213 c \$1 i \$2;
+#X msg 294 102 50 \$1 \, 51 \$1 \, 52 \$1 \, 53 \$1 \, 54 \$1;
+#X msg 42 190 51 \$1;
+#X obj 362 207 unpack f f;
+#X floatatom 396 308 5 0 0 0 - - -;
+#X obj 262 164 metro 50;
+#X msg 262 187 c 100;
+#X obj 262 138 tgl 18 0 empty empty empty 0 -9 0 10 -262144 -1 -1 0
+1;
+#X obj 419 235 t a;
+#X obj 419 261 / 8;
+#X obj 33 132 hsl 153 18 0 1023 0 0 empty empty empty -2 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 419 284 change;
+#X obj 198 172 tgl 18 0 empty empty empty 0 -9 0 10 -262144 -1 -1 0
+1;
+#X obj 198 195 * 1023;
+#X floatatom 307 143 5 0 0 0 - - -;
+#X obj 564 154 unpack f f, f 11;
+#X obj 564 200 moses 0;
+#X obj 564 226 moses 5;
+#X obj 663 88 loadbang;
+#X obj 663 111 f \$1;
+#X obj 663 155 * 5;
+#X obj 564 177 -, f 17;
+#X obj 696 112 bng 18 250 50 0 empty empty empty 0 -9 0 10 -262144
+-1 -1;
+#X obj 564 249 + 50;
+#X obj 564 272 pack f f, f 11;
+#X msg 564 295 c \$1 i \$2;
+#X obj 564 84 spigot 1;
+#X obj 658 17 r settings_onoff;
+#X obj 658 62 route \$1;
+#X obj 625 85 tgl 18 0 empty empty empty 0 -9 0 10 -262144 -1 -1 0
+1;
+#X obj 663 135 - 1;
+#X obj 32 62 fruit/fruit 1 led\$1 \$2 ledfw 1;
+#X obj 361 168 fruit/receive led\$1;
+#X obj 42 279 fruit/send led\$1;
+#X obj 658 39 route led;
+#X obj 564 61 r led-set;
+#X connect 0 0 3 0;
+#X connect 1 0 34 0;
+#X connect 3 0 1 0;
+#X connect 4 1 9 0;
+#X connect 6 0 7 0;
+#X connect 7 0 34 0;
+#X connect 8 0 6 0;
+#X connect 9 0 10 0;
+#X connect 10 0 12 0;
+#X connect 12 0 11 0;
+#X connect 13 0 14 0;
+#X connect 14 0 3 0;
+#X connect 15 0 6 1;
+#X connect 16 0 22 0;
+#X connect 16 1 25 1;
+#X connect 17 1 18 0;
+#X connect 18 0 24 0;
+#X connect 19 0 20 0;
+#X connect 20 0 31 0;
+#X connect 21 0 22 1;
+#X connect 22 0 17 0;
+#X connect 23 0 20 0;
+#X connect 24 0 25 0;
+#X connect 25 0 26 0;
+#X connect 26 0 34 0;
+#X connect 27 0 16 0;
+#X connect 28 0 35 0;
+#X connect 29 0 30 0;
+#X connect 30 0 27 1;
+#X connect 30 0 32 0;
+#X connect 31 0 21 0;
+#X connect 35 0 29 0;
+#X connect 36 0 27 0;

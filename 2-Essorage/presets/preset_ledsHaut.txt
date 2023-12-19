@@ -1,0 +1,7 @@
+moteur_ledsHaut amplitude 0 16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+moteur_ledsHaut déphase 0 16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+moteur_ledsHaut dureté 0.16 16 0.16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+;
+moteur_ledsHaut vitesse 0.2 16 0.2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+ledH2 lum 0.28 16 0.28 0.28 0.28 0.28 0 0 0 0 0 0 0 0 0 0 0 0;
+ledH1 lum 0.25 16 0.25 0.55 1 0.55 0 0 0 0 0 0 0 0 0 0 0 0;

@@ -1,0 +1,37 @@
+#N canvas 543 143 456 346 10;
+#X obj 33 50 oscparse;
+#X obj 33 268 netsend -u -b;
+#X obj 68 191 loadbang;
+#X obj 33 296 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 33 150 list prepend send;
+#X obj 33 171 list trim;
+#X obj 288 63 oscformat SET;
+#X obj 288 41 list;
+#X obj 33 70 list trim;
+#X obj 68 218 f \$1;
+#X msg 68 245 connect localhost \$1;
+#X obj 33 30 netreceive -u -b \$2;
+#X obj 33 91 s fromOSC;
+#X obj 33 125 r toOSC;
+#X obj 288 15 r toOSCset;
+#X obj 217 121 spigot;
+#X obj 268 127 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 217 98 r fromOSC;
+#X obj 217 144 print fromOSC;
+#X connect 0 0 8 0;
+#X connect 1 0 3 0;
+#X connect 2 0 9 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;
+#X connect 7 0 6 0;
+#X connect 8 0 12 0;
+#X connect 9 0 10 0;
+#X connect 10 0 1 0;
+#X connect 11 0 0 0;
+#X connect 13 0 4 0;
+#X connect 14 0 7 0;
+#X connect 15 0 18 0;
+#X connect 16 0 15 1;
+#X connect 17 0 15 0;
