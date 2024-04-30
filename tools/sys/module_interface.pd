@@ -31,8 +31,9 @@
 #X obj 568 303 apsubmaster \$1-PRESETS \$3 \$2;
 #X obj 568 329 apsubmaster \$1-PRESETS2 \$4 \$2;
 #X obj 31 225 r \$1-fromOSC;
-#X obj 31 248 route mute;
 #X obj 31 271 s \$1-mute;
+#X obj 31 248 route mute line, f 22;
+#X obj 95 274 s \$1-line;
 #X connect 0 0 16 0;
 #X connect 1 0 2 0;
 #X connect 3 0 19 0;
@@ -54,5 +55,6 @@
 #X connect 22 0 0 0;
 #X connect 23 0 17 0;
 #X connect 24 0 18 0;
-#X connect 30 0 31 0;
-#X connect 31 0 32 0;
+#X connect 30 0 32 0;
+#X connect 32 0 31 0;
+#X connect 32 1 33 0;

@@ -1,5 +1,5 @@
 {
-  "version": "1.25.7",
+  "version": "1.25.5",
   "createdWith": "Open Stage Control",
   "type": "fragment",
   "content": {
@@ -55,7 +55,7 @@
         "left": "2.5%",
         "lock": false,
         "id": "@{parent.id}_title",
-        "visible": true,
+        "visible": false,
         "comments": "",
         "width": "95%",
         "height": "10%",
@@ -216,7 +216,7 @@
         "typeTags": "",
         "ignoreDefaults": false,
         "bypass": false,
-        "label": false,
+        "label": "auto",
         "vertical": false,
         "on": 1,
         "off": 0,
