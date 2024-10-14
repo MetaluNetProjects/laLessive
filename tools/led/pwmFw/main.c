@@ -28,7 +28,7 @@ void setup() {
 	smooth_pwm_init(&pwms[10], 15);
 	smooth_pwm_init(&pwms[11], 22);*/
 
-	smooth_pwm_init(&pwms[0], 4);
+	/*smooth_pwm_init(&pwms[0], 4);
 	smooth_pwm_init(&pwms[1], 9);
 	smooth_pwm_init(&pwms[2], 5);
 	smooth_pwm_init(&pwms[3], 8);
@@ -39,7 +39,20 @@ void setup() {
 	smooth_pwm_init(&pwms[8], 13);
 	smooth_pwm_init(&pwms[9], 14);
 	smooth_pwm_init(&pwms[10], 15);
-	smooth_pwm_init(&pwms[11], 22);
+	smooth_pwm_init(&pwms[11], 22);*/
+
+	smooth_pwm_init(&pwms[0], 0);
+	smooth_pwm_init(&pwms[1], 1);
+	smooth_pwm_init(&pwms[2], 2);
+	smooth_pwm_init(&pwms[3], 3);
+	smooth_pwm_init(&pwms[4], 4);
+	smooth_pwm_init(&pwms[5], 5);
+	smooth_pwm_init(&pwms[6], 6);
+	smooth_pwm_init(&pwms[7], 7);
+	smooth_pwm_init(&pwms[8], 8);
+	smooth_pwm_init(&pwms[9], 9);
+	smooth_pwm_init(&pwms[10], 10);
+	smooth_pwm_init(&pwms[11], 11);
 }
 
 void loop(){

@@ -1,0 +1,10 @@
+#N canvas 1089 155 369 363 10;
+#X declare -path Fraise;
+#X obj 25 199 hsl 153 18 0 65535 0 0 empty empty empty -2 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 16 12 declare -path Fraise;
+#X obj 17 40 pied/pied 1;
+#X msg 22 243 c 12 i \$1;
+#X obj 22 287 fruit/send led1;
+#X obj 17 130 fruit/fruit 1 led1 100 pwmFw 1;
+#X connect 0 0 3 0;
+#X connect 3 0 4 0;

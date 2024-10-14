@@ -1,4 +1,4 @@
-#N canvas 1089 155 800 344 10;
+#N canvas 1110 492 800 344 10;
 #X obj 33 154 hsl 153 18 0 1023 0 0 empty empty empty -2 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X msg 42 213 c \$1 i \$2;
 #X msg 42 190 51 \$1;
@@ -30,8 +30,8 @@
 #X msg 522 290 c 10 c \$1 i \$2;
 #X floatatom 642 215 5 0 0 0 - - - 0;
 #X obj 585 207 * 65535;
-#X obj 32 62 fruit/fruit 1 led\$1 \$2 pico-fruitpwm 1;
 #X obj 583 30 route present;
+#X obj 32 62 fruit/fruit 1 led\$1 \$2 pwmFw 1;
 #X connect 0 0 2 0;
 #X connect 1 0 24 0;
 #X connect 2 0 1 0;
@@ -54,11 +54,11 @@
 #X connect 19 0 28 0;
 #X connect 20 0 10 0;
 #X connect 21 0 20 1;
-#X connect 21 0 31 0;
+#X connect 21 0 32 0;
 #X connect 22 0 15 0;
-#X connect 23 0 32 0;
+#X connect 23 0 31 0;
 #X connect 25 0 20 0;
 #X connect 26 0 21 0;
 #X connect 28 0 24 0;
 #X connect 30 0 19 1;
-#X connect 32 0 26 0;
+#X connect 31 0 26 0;
