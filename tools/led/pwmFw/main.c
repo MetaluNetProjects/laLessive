@@ -41,10 +41,15 @@ void setup() {
 	smooth_pwm_init(&pwms[10], 15);
 	smooth_pwm_init(&pwms[11], 22);*/
 
-	smooth_pwm_init(&pwms[0], 0);
+/*	smooth_pwm_init(&pwms[0], 0);
 	smooth_pwm_init(&pwms[1], 1);
 	smooth_pwm_init(&pwms[2], 2);
-	smooth_pwm_init(&pwms[3], 3);
+	smooth_pwm_init(&pwms[3], 3);*/
+	smooth_pwm_init(&pwms[0], 12);
+	smooth_pwm_init(&pwms[1], 13);
+	smooth_pwm_init(&pwms[2], 14);
+	smooth_pwm_init(&pwms[3], 15);
+
 	smooth_pwm_init(&pwms[4], 4);
 	smooth_pwm_init(&pwms[5], 5);
 	smooth_pwm_init(&pwms[6], 6);
