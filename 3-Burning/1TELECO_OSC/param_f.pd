@@ -1,0 +1,6 @@
+#N canvas 924 174 521 195 12;
+#X obj 219 83 apfx2c \$3 \$4 \$2;
+#X text 42 24 args: \$0 param_name preset1 preset2 [linetime_rcv];
+#X obj 41 84 param_common \$1 \$2 1 \$5;
+#X connect 0 0 2 0;
+#X connect 2 0 0 0;
