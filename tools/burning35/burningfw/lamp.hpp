@@ -27,7 +27,7 @@ public:
 		if(!time_reached(next_update_time)) return false;
 		next_update_time = make_timeout_time_ms(10);
 		value += (destination - value) * speed;
-		int pwm = std::clamp(master * value, 0.0f, 1.0f);
+		float pwm = std::clamp(master * value, 0.0f, 1.0f);
 		pwm_set_gpio_level(pwm_pin, (1.0 - pwm) * 65535.0);
 		return true;
 	}
